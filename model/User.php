@@ -53,17 +53,12 @@ class User extends Mysql
     function show()
     {
         echo "<tr>
-                <td>$this->id_user</td>
                 <td>$this->login</td>
-                <td>$this->password</td>
                 <td>$this->dt_ins</td>
                 <td>$this->surname</td>
                 <td>$this->name</td>
                 <td>$this->tel</td>
                 <td>$this->mail</td>
-                <td>$this->addr</td>
-                <td>$this->city</td>
-                <td>$this->pc</td>
                 <td>
                     <i data-id = '$this->id_user' class='fa fa-edit update' style='cursor: pointer;margin-right:3%;'></i>
                     <i data-id = '$this->id_user' class='fa fa-trash-alt delete' style='cursor: pointer;margin-left:3%;'></i>
