@@ -19,13 +19,13 @@ class Skill extends Mysql
 
     function insert()
     {
-        $variable = $this->base->prepare("INSERT INTO user (nom) VALUES (:nom)");
+        $variable = $this->base->prepare("INSERT INTO skill (nom) VALUES (:nom)");
         $variable->execute(array("nom" => $this->nom));
     }
 
     function update()
     {
-        $variable = $this->base->prepare("UPDATE user SET nom = :nom WHERE id_skill = :id_skill");
+        $variable = $this->base->prepare("UPDATE skill SET nom = :nom WHERE id_skill = :id_skill");
         $variable->execute(array("nom" => $this->nom, "id_skill" => $this->id_skill));
     }
 
@@ -43,7 +43,7 @@ class Skill extends Mysql
 
     function delete()
     {
-        $variable = $this->base->prepare("DELETE FROM user WHERE id_skill = :id_skill");
+        $variable = $this->base->prepare("DELETE FROM skill WHERE id_skill = :id_skill");
         $variable->execute(array('id_skill'=> $this->id_skill));
     }
 
