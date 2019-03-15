@@ -6,7 +6,7 @@
  * Time: 09:46
  */
 
-class Job
+class Job extends Mysql
 {
     private $id_job;
     private $typeContrat;

@@ -6,7 +6,7 @@
  * Time: 10:24
  */
 
-class Recruiter
+class Recruiter extends Mysql
 {
     private $id_recruiter;
 

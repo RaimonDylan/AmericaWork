@@ -6,7 +6,7 @@
  * Time: 09:33
  */
 
-class Company
+class Company extends Mysql
 {
     private $id_company;
     private $name;

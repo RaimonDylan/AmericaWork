@@ -6,7 +6,7 @@
  * Time: 10:10
  */
 
-class Experience
+class Experience extends Mysql
 {
     private $id_experience;
     private $nameCompagny;

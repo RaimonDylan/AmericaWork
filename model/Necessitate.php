@@ -6,7 +6,7 @@
  * Time: 10:31
  */
 
-class Necessitate
+class Necessitate extends Mysql
 {
     private $type;
 

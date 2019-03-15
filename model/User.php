@@ -6,7 +6,10 @@
  * Time: 08:55
  */
 
-class User
+//NE PAS OUBLIER LES CLEFS ETRANGERES
+//RENOMER LES TABLES ASSOCIATIVES
+
+class User extends Mysql
 {
     private $id_user;
     private $login;
@@ -33,6 +36,45 @@ class User
         $this->addr = $addr;
         $this->city = $city;
         $this->setPc($pc);
+    }
+
+    function insert()
+    {
+        $variable = $this->base->prepare("INSERT INTO user (login,password,dt_ins,surname,name,tel,mail,addr,city,pc) VALUES (:login, :password, :dt_ins, :surname, :name, :tel, :mail, :addr, :city, :pc)");
+        $variable->execute(array("login" => $this->login, "password" => $this->password, "dt_ins" => $this->dt_ins, "surname" => $this->surname, "name" => $this->name, "tel" => $this->tel, "mail" => $this->mail, "addr" => $this->addr, "city" => $this->city, "pc" => $this->pc));
+    }
+
+    function update()
+    {
+        $variable = $this->base->prepare("UPDATE user SET login = :login, password = :password, dt_ins = :dt_ins, surname = :surname, name = :name, tel = :tel, mail = :mail, addr = :addr, city = :city, pc = :pc WHERE id_user = :id_user");
+        $variable->execute(array("login" => $this->login, "password" => $this->password, "dt_ins" => $this->dt_ins, "surname" => $this->surname, "name" => $this->name, "tel" => $this->tel, "mail" => $this->mail, "addr" => $this->addr, "city" => $this->city, "pc" => $this->pc, "id_user" => $this->id_user));
+    }
+
+    function show()
+    {
+        echo "<tr>
+                <td>$this->id_user</td>
+                <td>$this->login</td>
+                <td>$this->password</td>
+                <td>$this->dt_ins</td>
+                <td>$this->surname</td>
+                <td>$this->name</td>
+                <td>$this->tel</td>
+                <td>$this->mail</td>
+                <td>$this->addr</td>
+                <td>$this->city</td>
+                <td>$this->pc</td>
+                <td>
+                    <i data-id = '$this->id_user' class='fa fa-edit update' style='cursor: pointer;margin-right:3%;'></i>
+                    <i data-id = '$this->id_user' class='fa fa-trash-alt delete' style='cursor: pointer;margin-left:3%;'></i>
+                </td>
+              </tr>";
+    }
+
+    function delete()
+    {
+        $variable = $this->base->prepare("DELETE FROM user WHERE id_user = :id_user");
+        $variable->execute(array('id_user'=> $this->id_user));
     }
 
     /**
