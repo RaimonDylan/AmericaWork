@@ -12,6 +12,6 @@ class Mysql
 
     function __construct()
     {
-        $this->base  = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+        $this->base  = new PDO('mysql:host=localhost;dbname=america', 'root', '');
     }
 }

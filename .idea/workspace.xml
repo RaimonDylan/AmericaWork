@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4958c0a-adc3-40f9-9a88-65e91e177926" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Utilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Utilisateur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Mysql.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Mysql.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/bootstrap-responsive.min.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/bootstrap.min.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/fancybox/blank.gif" beforeDir="false" />
@@ -135,7 +135,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Utilisateur.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -144,11 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/Mysql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="153">
+              <caret line="14" column="67" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -258,8 +258,8 @@
         <option value="$PROJECT_DIR$/view/admin.php" />
         <option value="$PROJECT_DIR$/view/ajoutUtilisateur.php" />
         <option value="$PROJECT_DIR$/controller/ajoutUtilisateurBDD.php" />
-        <option value="$PROJECT_DIR$/model/Mysql.php" />
         <option value="$PROJECT_DIR$/model/Utilisateur.php" />
+        <option value="$PROJECT_DIR$/model/Mysql.php" />
       </list>
     </option>
   </component>
@@ -359,12 +359,12 @@
       <workItem from="1552577250896" duration="808000" />
       <workItem from="1552636090903" duration="255000" />
       <workItem from="1552636359208" duration="3238000" />
-      <workItem from="1552641082493" duration="318000" />
+      <workItem from="1552641082493" duration="702000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23517000" />
+    <option name="totallyTimeSpent" value="23901000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -540,17 +540,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Mysql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/Utilisateur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Mysql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="67" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
         </state>
       </provider>
     </entry>
