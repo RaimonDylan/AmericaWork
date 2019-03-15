@@ -4,7 +4,7 @@
 	{
 		private $id_student;
 		private $website;
-		private $description
+		private $description;
 		private $twitter;
 		private $facebook;
 		private $hobbies;
@@ -19,13 +19,15 @@
 			$this->hobbies = $hobbies;
 		}
 
-		function insert(){
-			$variable = $this->base->prepare(statement: "INSERT INTO student(website, description, twitter, facebook, hobbies) VALUES (:website, :description :twitter, :facebook, :hobbies");
-			$variable = execute(array("website" => $this->website, "description" => $this->website, "twitter"=> $this->twitter, "facebook"=>$this->facebook, "hobbies"=>$this->hobbies));
+		function insert()
+        {
+            $variable = $this->base->prepare("INSERT INTO student(website, description, twitter, facebook, hobbies) VALUES (:website, :description :twitter, :facebook, :hobbies");
+            $variable->execute(array("website" => $this->website, "description" => $this->website, "twitter" => $this->twitter, "facebook" => $this->facebook, "hobbies" => $this->hobbies));
+        }
 
 		function update(){
 			$variable = $this->base->prepare("UPDATE student SET website = :website, description = :description, twitter = :twitter, facebook = :facebook, hobbies = :hobbies");
-        	$variable = execute(array("website" => $this->website, "description" => $this->website, "twitter"=> $this->twitter, "facebook"=>$this->facebook, "hobbies"=>$this->hobbies));
+        	$variable->execute(array("website" => $this->website, "description" => $this->website, "twitter"=> $this->twitter, "facebook"=>$this->facebook, "hobbies"=>$this->hobbies));
 		}
 
 		function show(){
@@ -40,14 +42,14 @@
 	                    <i data-id = '$this->id_student' class='fa fa-edit update' style='cursor: pointer;margin-right:3%;'></i>
 	                    <i data-id = '$this->id_student' class='fa fa-trash-alt delete' style='cursor: pointer;margin-left:3%;'></i>
                 	</td>
-				  </tr>"
+				  </tr>";
 		}
 
-		function delete(){
+		function delete()
+        {
 			$variable = $this->base->prepare("DELETE FROM student WHERE id_student = :id_student");
         	$variable->execute(array('id_student'=> $this->id_student));
 		}
-
 
 		/**
 	     * @return mixed
@@ -59,7 +61,7 @@
 		/**
 	     * @param mixed $id_user
 	     */
-		public function setStudentID(){
+		public function setStudentID($id_student){
 			$this->id_student = $id_student;
 		}
 
@@ -83,7 +85,7 @@
 		/**
 	     * @param mixed $id_user
 	     */
-		public function setDescription(){
+		public function setDescription($description){
 			$this->description = $description;
 		}
 
@@ -99,7 +101,9 @@
 	     */
 		public function setTwitter($twitter){
 			if(preg_match('/http(?:s)?:\/\/(?:www\.)?twitter\.com\/([a-zA-Z0-9_]+)/',$twitter))
-				$this->twitter = $twitter;
+            {
+                $this->twitter = $twitter;
+            }
 		}
 
 		/**
@@ -127,7 +131,7 @@
 		/**
 	     * @param mixed $id_user
 	     */
-		public function setHobbies(){
+		public function setHobbies($hobbies){
 			$this->hobbies = $hobbies;
 		}
 
