@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e4958c0a-adc3-40f9-9a88-65e91e177926" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/bootstrap-responsive.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/fancybox/blank.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/fancybox/fancybox_loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/fancybox/fancybox_overlay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/fancybox/fancybox_sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/fancybox/jquery.fancybox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/fonts/Icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/fonts/Icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/fonts/Icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/fonts/Icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/shortcodes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/supersized.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/css/supersized.shutter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/filter-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/filter-icon_@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/logo_@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/menu-mobile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/menu-mobile_@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/profile/profile-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/profile/profile-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/profile/profile-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/bg-black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/bg-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/button-tray-down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/button-tray-up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/forward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/nav-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/nav-dot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/pause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/progress-back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/progress-bar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/progress.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/supersized-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/thumb-back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/supersized/thumb-forward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/admin-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/antonio.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/charly.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/christophe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/dylanA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/dylanR.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/guillyan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/hugo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/jb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/nicoli.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/noel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/pictureless.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/rémy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/sebastian.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/img/work/thumbs/wissem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/jquery.fancybox-media.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/jquery.fancybox.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/jquery.isotope.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/jquery.tweet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/modernizr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/placeholder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/supersized.3.2.7.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/twitter/fcbfb193cf530c2c94c05262b59f5af6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/twitter/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/twitter/lib/tmhOAuth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/twitter/lib/tmhUtilities.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/waypoints-sticky.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/js/waypoints.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/_include/php/contact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accueil_sio_portfolio/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../developer-v1.5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../developer-v1.5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../developer-v1.5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../developer-v1.5/index.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="web" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/ajoutUtilisateur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+              <folding>
+                <element signature="e#6#78#0#PHP" />
+                <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/css/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-329">
+              <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/modifUtilisateurBDD.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+              <folding>
+                <marker date="1552516375273" expanded="true" signature="455:593" ph="UPDATE Utili... " />
+                <marker date="1552516375273" expanded="true" signature="461:567" ph="INSERT INTO Utilisateur... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/ajoutUtilisateurBDD.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/Utilisateur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="61" column="37" lean-forward="true" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/AdminClass.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+              <folding>
+                <element signature="e#6#31#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="63" selection-start-line="63" selection-end-line="76" selection-end-column="9" />
+              <folding>
+                <marker date="1552551945390" expanded="true" signature="296:321" ph="SELECT * FRO... utilisateur" />
+                <marker date="1552551945390" expanded="true" signature="910:929" ph="..." />
+                <marker date="1552551945390" expanded="true" signature="930:1191" ph="..." />
+                <marker date="1552551945390" expanded="true" signature="961:1179" ph="..." />
+                <marker date="1552551945390" expanded="true" signature="974:1166" ph="..." />
+                <marker date="1552551945390" expanded="true" signature="1527:2373" ph="..." />
+                <marker date="1552551945390" expanded="true" signature="1716:2353" ph="..." />
+                <marker date="1552551945390" expanded="true" signature="1774:1806" ph="..." />
+                <marker date="1552551945390" expanded="true" signature="1874:1905" ph="..." />
+                <marker date="1552551945390" expanded="true" signature="1945:1958" ph="..." />
+                <marker date="1552551945390" expanded="true" signature="2026:2122" ph="..." />
+                <marker date="1552551945390" expanded="true" signature="2157:2170" ph="..." />
+                <marker date="1552551945390" expanded="true" signature="2234:2331" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/modifUtilisateur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="28" />
+              <folding>
+                <element signature="e#6#135#0#PHP" />
+                <marker date="1552516375041" expanded="true" signature="291:343" ph="SELECT * FRO... Utilisateur" />
+                <marker date="1552516375041" expanded="true" signature="300:343" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/delete.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="4" selection-end-column="3" />
+              <folding>
+                <marker date="1552516375445" expanded="true" signature="228:277" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/styles.css" />
+        <option value="$PROJECT_DIR$/ajoutUtilisateur.php" />
+        <option value="$PROJECT_DIR$/delete.php" />
+        <option value="$PROJECT_DIR$/modifUtilisateur.php" />
+        <option value="$PROJECT_DIR$/modifUtilisateurBDD.php" />
+        <option value="$PROJECT_DIR$/header.php" />
+        <option value="$PROJECT_DIR$/AdminClass.php" />
+        <option value="$PROJECT_DIR$/verif.php" />
+        <option value="$PROJECT_DIR$/admin.php" />
+        <option value="$PROJECT_DIR$/Utilisateur.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/view/modifUtilisateur.php" />
+        <option value="$PROJECT_DIR$/controller/modifUtilisateurBDD.php" />
+        <option value="$PROJECT_DIR$/controller/delete.php" />
+        <option value="$PROJECT_DIR$/controller/verif.php" />
+        <option value="$PROJECT_DIR$/model/AdminClass.php" />
+        <option value="$PROJECT_DIR$/model/Utilisateur.php" />
+        <option value="$PROJECT_DIR$/view/admin.php" />
+        <option value="$PROJECT_DIR$/view/ajoutUtilisateur.php" />
+        <option value="$PROJECT_DIR$/controller/ajoutUtilisateurBDD.php" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1313" />
+    <option name="height" value="784" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="loginBdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loginBdd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loginBdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loginBdd" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loginBdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loginBdd" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loginBdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loginBdd" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\loginBdd\controller" />
+      <recent name="C:\xampp\htdocs\loginBdd\view" />
+      <recent name="C:\xampp\htdocs\loginBdd\model" />
+      <recent name="C:\xampp\htdocs\loginBdd\res\css" />
+      <recent name="C:\xampp\htdocs\loginBdd\Css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\web" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4958c0a-adc3-40f9-9a88-65e91e177926" name="Default" comment="" />
+      <created>1552068445934</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552068445934</updated>
+      <workItem from="1552068447735" duration="8436000" />
+      <workItem from="1552376277043" duration="9858000" />
+      <workItem from="1552572184611" duration="604000" />
+      <workItem from="1552577250896" duration="808000" />
+      <workItem from="1552636090903" duration="255000" />
+      <workItem from="1552636359208" duration="3238000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="23199000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1313" height="784" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1963288" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937685" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24903624" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937685" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/form.css" />
+    <entry file="file://$PROJECT_DIR$/view/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="93" selection-start-line="2" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/verif.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#172#0#PHP" />
+            <marker date="1552516374917" expanded="true" signature="342:361" ph="SELECT * FRO... admin" />
+            <marker date="1552516374917" expanded="true" signature="342:363" ph="SELECT * FRO... admin" />
+            <marker date="1552516374917" expanded="true" signature="891:962" ph="SELECT * FRO... utilisateur" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="4" selection-end-column="3" />
+          <folding>
+            <marker date="1552516375445" expanded="true" signature="228:277" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="63" selection-start-line="63" selection-end-line="76" selection-end-column="9" />
+          <folding>
+            <marker date="1552551945390" expanded="true" signature="296:321" ph="SELECT * FRO... utilisateur" />
+            <marker date="1552551945390" expanded="true" signature="910:929" ph="..." />
+            <marker date="1552551945390" expanded="true" signature="930:1191" ph="..." />
+            <marker date="1552551945390" expanded="true" signature="961:1179" ph="..." />
+            <marker date="1552551945390" expanded="true" signature="974:1166" ph="..." />
+            <marker date="1552551945390" expanded="true" signature="1527:2373" ph="..." />
+            <marker date="1552551945390" expanded="true" signature="1716:2353" ph="..." />
+            <marker date="1552551945390" expanded="true" signature="1774:1806" ph="..." />
+            <marker date="1552551945390" expanded="true" signature="1874:1905" ph="..." />
+            <marker date="1552551945390" expanded="true" signature="1945:1958" ph="..." />
+            <marker date="1552551945390" expanded="true" signature="2026:2122" ph="..." />
+            <marker date="1552551945390" expanded="true" signature="2157:2170" ph="..." />
+            <marker date="1552551945390" expanded="true" signature="2234:2331" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/AdminClass.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="e#6#31#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Utilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="61" column="37" lean-forward="true" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-329">
+          <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/modifUtilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="28" />
+          <folding>
+            <element signature="e#6#135#0#PHP" />
+            <marker date="1552516375041" expanded="true" signature="291:343" ph="SELECT * FRO... Utilisateur" />
+            <marker date="1552516375041" expanded="true" signature="300:343" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/modifUtilisateurBDD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <marker date="1552516375273" expanded="true" signature="455:593" ph="UPDATE Utili... " />
+            <marker date="1552516375273" expanded="true" signature="461:567" ph="INSERT INTO Utilisateur... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/ajoutUtilisateurBDD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/ajoutUtilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding>
+            <element signature="e#6#78#0#PHP" />
+            <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
