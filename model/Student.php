@@ -1,6 +1,6 @@
 <?php
 
-	class Student
+	class Student extends Mysql
 	{
 		private $id_student;
 		private $website;
@@ -8,15 +8,17 @@
 		private $twitter;
 		private $facebook;
 		private $hobbies;
+		private $user;
 
 
-		function __construct($id_student, $website, $description, $twitter, $facebook, $hobbies){
+		function __construct($id_student, $website, $description, $twitter, $facebook, $hobbies, $user){
 			$this->id_student = $id_student;
 			$this->website = $website;
 			$this->description = $description;
 			$this->twitter = $twitter;
 			$this->facebook = $facebook;
 			$this->hobbies = $hobbies;
+			$this->user = $user;
 		}
 
 		function insert()
@@ -51,6 +53,11 @@
         	$variable->execute(array('id_student'=> $this->id_student));
 		}
 
+        public function getUser()
+        {
+            return $this->user;
+        }
+
 		/**
 	     * @return mixed
 	     */
@@ -70,7 +77,8 @@
 	     * @param mixed $id_user
 	     */
 		public function setWebsite($website){
-			if(preg_match( '/^(http|https):\\/\\/[a-z0-9_]+([\\-\\.]{1}[a-z_0-9]+)*\\.[_a-z]{2,5}'.'((:[0-9]{1,5})?\\/.*)?$/i' ,$website)){
+		    $url = preg_match( '/^(http|https):\\/\\/[a-z0-9_]+([\\-\\.]{1}[a-z_0-9]+)*\\.[_a-z]{2,5}'.'((:[0-9]{1,5})?\\/.*)?$/i', $website);
+			if($url){
 				$this->website = $website;
 			}
 		}

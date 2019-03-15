@@ -7,14 +7,14 @@
 include 'header.php';
 include '../model/Mysql.php';
 include '../model/User.php';
-include '../model/Recruiter.php';
+include '../model/Student.php';
 $dbh  = new PDO('mysql:host=localhost;dbname=america', 'root', '');
-$datas = $dbh->query("SELECT * FROM user NATURAL join recruiter");
-$recruiters = null;
+$datas = $dbh->query("SELECT * FROM user NATURAL join student");
+$students = null;
 while ($data = $datas->fetch()){
     $user = new User($data['id_user'],$data['login'],$data['password'],$data['dt_ins'],$data['surname'],$data['name'],$data['tel'],$data['mail'],$data['addr'],$data['city'],$data['pc']);
     $users[] = $user;
-    $recruiters[] = new Recruiter($data['id_recruiter'],$user);
+    $students[] = new Student($data['id_student'],$data['website'],$data['description'],$data['twitter'],$data['facebook'],$data['hobbies'],$user);
 }
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -24,10 +24,10 @@ while ($data = $datas->fetch()){
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="student.php">Etudiants</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="recruiter.php">Recruteurs</a>
             </li>
             <li class="nav-item">
@@ -37,39 +37,28 @@ while ($data = $datas->fetch()){
     </div>
 </nav>
 <div style="width: 80%; margin-left: auto; margin-right: auto; margin-top: 1%">
-    <h2 style="float:left;">liste recruteurs</h2>
-    <form style="float:right;"  method="post" action="ajoutRecruiter.php">
-        <input type="submit" value="Ajouter recruteur" class = "btn btn-primary"></button>
+    <h2 style="float:left;">liste étudiants</h2>
+    <form style="float:right;"  method="post" action="ajoutStudent.php">
+        <input type="submit" value="Ajouter étudiant" class = "btn btn-primary"></button>
     </form>
     <?php
 
     echo "<table class='table table-striped' style='text-align: center;'>
     <thead class='thead-dark'>
         <tr>
-            <th>id</th>
             <th>Login</th>
+            <th>Date inscription</th>
             <th>Nom</th>
             <th>Prénom</th>
+            <th>Téléphone</th>
+            <th>Mail</th>
             <th>Gestion</th>
         </tr>
     </thead>
     <tbody>";
-    foreach ($recruiters as $recruiter){
-        $id = $recruiter->getIdRecruiter();
-        $user = $recruiter->getUser();
-        $login = $user->getLogin();
-        $nom = $user->getSurname();
-        $prenom = $user->getName();
-        echo "<tr>
-                <td>$id</td>
-                <td>$login</td>
-                <td>$nom</td>
-                <td>$prenom</td>
-                <td>
-                    <i data-id='$id' class='fa fa-edit update' style='cursor: pointer;margin-right:3%;'></i>
-                    <i data-id='$id' class='fa fa-trash-alt delete' style='cursor: pointer;margin-left:3%;'></i>
-                </td>
-              </tr>";
+    foreach ($students as $student){
+    $user = $student->getUser();
+        $user->show();
     }
     echo "</tbody></table>";
 
