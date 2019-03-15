@@ -38,38 +38,25 @@ while ($data = $datas->fetch()){
 </nav>
 <div style="width: 80%; margin-left: auto; margin-right: auto; margin-top: 1%">
     <h2 style="float:left;">liste recruteurs</h2>
-    <form style="float:right;"  method="post" action="ajoutRecruiter.php">
-        <input type="submit" value="Ajouter recruteur" class = "btn btn-primary"></button>
-    </form>
+    <input id='addRecruiter' type="submit" value="Ajouter recruteur" class = "btn btn-primary"></button>
     <?php
 
-    echo "<table class='table table-striped' style='text-align: center;'>
+    echo "<table id='' class='table table-striped'  style='text-align: center;'>
     <thead class='thead-dark'>
         <tr>
-            <th>id</th>
             <th>Login</th>
+            <th>Date inscription</th>
             <th>Nom</th>
             <th>Prénom</th>
+            <th>Téléphone</th>
+            <th>Mail</th>
             <th>Gestion</th>
         </tr>
     </thead>
     <tbody>";
     foreach ($recruiters as $recruiter){
-        $id = $recruiter->getIdRecruiter();
         $user = $recruiter->getUser();
-        $login = $user->getLogin();
-        $nom = $user->getSurname();
-        $prenom = $user->getName();
-        echo "<tr>
-                <td>$id</td>
-                <td>$login</td>
-                <td>$nom</td>
-                <td>$prenom</td>
-                <td>
-                    <i data-id='$id' class='fa fa-edit update' style='cursor: pointer;margin-right:3%;'></i>
-                    <i data-id='$id' class='fa fa-trash-alt delete' style='cursor: pointer;margin-left:3%;'></i>
-                </td>
-              </tr>";
+        $user->show();
     }
     echo "</tbody></table>";
 
@@ -77,6 +64,14 @@ while ($data = $datas->fetch()){
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
+
+        $(document).on("click","#addRecruiter",function () {
+            if(confirm("Voulez vous vraiment supprimer cet utilisateur ?"))
+            {
+                // TODO
+            }
+        });
+
         $(document).on("click",".delete",function () {
             if(confirm("Voulez vous vraiment supprimer cet utilisateur ?"))
             {
