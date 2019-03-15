@@ -13,7 +13,7 @@ $datas = $dbh->query("SELECT * FROM user NATURAL join recruiter");
 $recruiters = null;
 while ($data = $datas->fetch()){
     $user = new User($data['id_user'],$data['login'],$data['password'],$data['dt_ins'],$data['surname'],$data['name'],$data['tel'],$data['mail'],$data['addr'],$data['city'],$data['pc']);
-    $users[] = $user;
+    $users[$data['id_user']] = $user;
     $recruiters[] = new Recruiter($data['id_recruiter'],$user);
 }
 ?>
@@ -36,12 +36,12 @@ while ($data = $datas->fetch()){
         </ul>
     </div>
 </nav>
-<div style="width: 80%; margin-left: auto; margin-right: auto; margin-top: 1%">
+<div id='tableRecruiter' style="width: 80%; margin-left: auto; margin-right: auto; margin-top: 1%">
     <h2 style="float:left;">liste recruteurs</h2>
-    <input id='addRecruiter' type="submit" value="Ajouter recruteur" class = "btn btn-primary"></button>
+    <input id='addRecruiter' type="submit" value="Ajouter recruteur" class = "btn btn-primary" style="float:right;"></button>
     <?php
 
-    echo "<table id='' class='table table-striped'  style='text-align: center;'>
+    echo "<table  class='table table-striped'  style='text-align: center;'>
     <thead class='thead-dark'>
         <tr>
             <th>Login</th>
@@ -62,20 +62,64 @@ while ($data = $datas->fetch()){
 
     ?>
 </div>
+
+<div id="formulaire" class="login-dark" style="display: none;">
+    <h2 style='text-align: center;color:#000;margin-top:1%;'>Créer un recruteur</h2>
+    <form style="width: 60%; margin-left: auto; margin-right: auto; margin-top: 1%">
+        <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>Identifiant</label>
+            <input id='login' type="text" name="identifiant" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Password</label>
+            <input id='password' type="password" name="motdepasse" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Nom</label>
+            <input id='surname'type="text" name="nom" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Prénom</label>
+            <input id='name' type="text" name="prenom" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Téléphone</label>
+            <input id='tel' type="text" name="tel" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Mail</label>
+            <input id='mail' type="text" name="mail" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Adresse</label>
+            <input id='addr' type="text" name="tel" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Ville</label>
+            <input id='city' type="text" name="tel" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Code postal</label>
+            <input id='pc' type="text" name="tel" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+        </div>
+        </div>
+        <input id="create" value="Créer" class="btn btn-default">
+    </form>
+</div>
 <script type="text/javascript">
     $(document).ready(function () {
 
         $(document).on("click","#addRecruiter",function () {
-            if(confirm("Voulez vous vraiment supprimer cet utilisateur ?"))
-            {
-                // TODO
-            }
+            $('#tableRecruiter').hide();
+            $('#formulaire').show();
         });
 
         $(document).on("click",".delete",function () {
-            if(confirm("Voulez vous vraiment supprimer cet utilisateur ?"))
+            if(confirm("Voulez vous vraiment supprimer ce recruteur ?"))
             {
-                // TODO
+               var id = $(this).data('id');
+               
             }
         });
 
