@@ -4,7 +4,7 @@
  *
  */
 
-class Utilisateur
+class Utilisateur extends Mysql
 {
     private $nom;
     private $prenom;
