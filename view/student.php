@@ -127,6 +127,72 @@ while ($data = $datas->fetch()){
         <input id="create" value="Créer" class="btn btn-default">
     </form>
 </div>
+
+<div id="modification" class="login-dark" style="display: none;">
+    <h2 style='text-align: center;color:#000;margin-top:1%;'>Créer un Étudiant</h2>
+    <form style="width: 60%; margin-left: auto; margin-right: auto; margin-top: 1%">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label>Identifiant</label>
+                <input id='login' type="text" name="identifiant" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Password</label>
+                <input id='password' type="password" name="motdepasse" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Nom</label>
+                <input id='surname'type="text" name="nom" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Prénom</label>
+                <input id='name' type="text" name="prenom" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Téléphone</label>
+                <input id='tel' type="text" name="tel" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Mail</label>
+                <input id='mail' type="text" name="mail" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Adresse</label>
+                <input id='addr' type="text" name="addr" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Ville</label>
+                <input id='city' type="text" name="city" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Code postal</label>
+                <input id='pc' type="text" name="pc" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Site web</label>
+                <input id='website' type="text" name="website" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Description</label>
+                <input id='description' type="text" name="description" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Twitter</label>
+                <input id='twitter' type="text" name="twitter" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Facebook</label>
+                <input id='facebook' type="text" name="facebook" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Hobbies</label>
+                <input id='hobbies' type="text" name="hobbies" size="12" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+            </div>
+        </div>
+        <input id="create" value="Créer" class="btn btn-default">
+    </form>
+</div>
+
 <script type="text/javascript">
     $(document).ready(function () {
 
@@ -143,7 +209,10 @@ while ($data = $datas->fetch()){
         });
 
         $(document).on("click",".update",function () {
-            // TODO
+            $('#tableStudent').hide();
+            $('#modification').show();
+            var valeurLogin = $(this).parent().parent().find('.login').text();
+            $('#login').text(valeurLogin);
         });
     })
 </script>

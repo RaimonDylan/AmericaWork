@@ -53,7 +53,7 @@ class User extends Mysql
     function show()
     {
         echo "<tr>
-                <td>$this->login</td>
+                <td class = 'login'>$this->login</td>
                 <td>$this->dt_ins</td>
                 <td>$this->surname</td>
                 <td>$this->name</td>
