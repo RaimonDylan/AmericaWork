@@ -122,6 +122,8 @@ class User extends Mysql
      */
     public function setPassword($password)
     {
+        $this->password = $password;
+        /*
         $uppercase = preg_match('@[A-Z]@', $password);
         $number = preg_match('@[0-9]@', $password);
         $letter = preg_match('@[a-z]@', $password);
@@ -129,6 +131,7 @@ class User extends Mysql
         {
             $this->password = $password;
         }
+        */
     }
 
     /**

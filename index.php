@@ -16,15 +16,9 @@
     <form method="post" action="controller/verif.php" style="width: 30%;">
         <h2 class="sr-only">Login Form</h2>
         <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-        <div class="form-group"><input class="form-control" type="text" name="identifiant" placeholder="Identifiant"></div>
-        <div class="form-group"><input class="form-control" type="password" name="motdepasse" placeholder="Mot de passe"></div>
+        <div class="form-group"><input class="form-control" type="text" name="identifiant" placeholder="Identifiant" readonly onfocus="this.removeAttribute('readonly');"></div>
+        <div class="form-group"><input class="form-control" type="password" name="motdepasse" placeholder="Mot de passe" readonly onfocus="this.removeAttribute('readonly');"></div>
         <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Se connecter</button></div></form>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-<?php
-    include "model/Mysql.php";
-    include "model/Skill.php";
-    $variablenimporte = new Skill(1, "nimporte");
-    $variablenimporte->show();
-?>

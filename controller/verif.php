@@ -5,7 +5,7 @@
  * Redirection vers page selon l'utilisateur ou administrateur
  */
 include '../model/AdminClass.php';
-$dbh  = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+$dbh  = new PDO('mysql:host=localhost;dbname=america', 'root', '');
 /////////// Creation de l'admin //////////////
 $infos = $dbh->query("SELECT * FROM admin");
 $admin = null;
@@ -21,8 +21,6 @@ $motdepasse = htmlspecialchars($_POST['motdepasse']);
 
 if($admin->verifyLogin($login,$motdepasse))
 {
-    $login = $data['login'];
-    $password = $data['password'];
     header('Location: ../view/admin.php');
 } else {
     $variable = $dbh->prepare("SELECT * FROM utilisateur WHERE login =:login AND password =:motdepasse");

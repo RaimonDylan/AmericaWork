@@ -9,14 +9,21 @@
 class Recruiter extends Mysql
 {
     private $id_recruiter;
+    private $user;
 
     /**
      * Recruiter constructor.
      * @param $id_recruiter
      */
-    public function __construct($id_recruiter)
+    public function __construct($id_recruiter,$user)
     {
         $this->id_recruiter = $id_recruiter;
+        $this->user = $user;
+    }
+
+    public function getUser()
+    {
+        return $this->user;
     }
 
     /**

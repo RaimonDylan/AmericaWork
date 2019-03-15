@@ -19,13 +19,7 @@ class AdminClass
     }
     public function setMotDePasse($motDePasse)
     {
-        $uppercase = preg_match('@[A-Z]@', $motDePasse);
-        $number = preg_match('@[0-9]@', $motDePasse);
-        $letter = preg_match('@[a-z]@', $motDePasse);
-        if($uppercase && $number && $letter)
-        {
-            $this->motDePasse = $motDePasse;
-        }
+        $this->motDePasse = $motDePasse;
     }
     public function getDateDeCreation()
     {
@@ -36,10 +30,9 @@ class AdminClass
     {
         $this->login = $login;
         $this->setMotDePasse($motDePasse);
-        $this->dateDeCreation = date('d/m/y H:i:s');
     }
 
     public function verifyLogin($login,$password){
-        return ($login == $this->login && $password == $this->motDePasse);
+        return ($login == $this->login && password_verify($password ,$this->motDePasse));
     }
 }
