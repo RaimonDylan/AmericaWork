@@ -1,24 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>BDD login</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="res/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-</head>
-<body>
-<div class="login-dark">
-    <form method="post" action="controller/verif.php" style="width: 30%;">
-        <h2 class="sr-only">Login Form</h2>
-        <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
-        <div class="form-group"><input class="form-control" type="text" name="identifiant" placeholder="Identifiant" readonly onfocus="this.removeAttribute('readonly');"></div>
-        <div class="form-group"><input class="form-control" type="password" name="motdepasse" placeholder="Mot de passe" readonly onfocus="this.removeAttribute('readonly');"></div>
-        <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Se connecter</button></div></form>
+<?php
+session_start();
+require_once './config/config.php';
+require_once 'includes/auth_validate.php';
+
+//Get DB instance. function is defined in config.php
+$db = getDbInstance();
+
+//Get Dashboard information
+$numUsers = $db->getValue ("user", "count(*)");
+$numStudents = $db->getValue ("student", "count(*)");
+$numRecruiters = $db->getValue ("recruiter", "count(*)");
+
+include_once('includes/header.php');
+?>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Tableau de bord</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-users fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"><?php echo $numUsers; ?></div>
+                            <div>Utilisateurs</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="views/user/user.php">
+                    <div class="panel-footer">
+                        <span class="pull-left">Voir détails</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-user fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"><?php echo $numRecruiters; ?></div>
+                            <div>Recruteurs</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">Voir détails</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-user fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"><?php echo $numStudents; ?></div>
+                            <div>Etudiants</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">Voir détails</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            
+        </div>
+    </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+<?php include_once('includes/footer.php'); ?>
