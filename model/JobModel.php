@@ -18,6 +18,33 @@ class JobModel
         $jobs = $this->db->arraybuilder()->paginate("job", $page);
         return $jobs;
     }
+    public function getAllRecruiters(){
+        $recruiters = $this->db->arraybuilder()->paginate("recruiter", 1);
+        $users = $this->db->arraybuilder()->paginate("user", 1);
+        $arr = array();
+        foreach ($users as $user){
+            foreach ($recruiters as $recruiter){
+                if ($recruiter['id_user'] == $user['id_user']){
+                    $arr[] = array_merge($user, $recruiter);
+                }
+            }
+        }
+        return $arr;
+    }
+
+    public function getAllStudents(){
+        $students = $this->db->arraybuilder()->paginate("student", 1);
+        $users = $this->db->arraybuilder()->paginate("user", 1);
+        $arr = array();
+        foreach ($users as $user){
+            foreach ($students as $student){
+                if ($student['id_user'] == $user['id_user']){
+                    $arr[] = array_merge($user, $student);
+                }
+            }
+        }
+        return $arr;
+    }
 
     public function getJobById($id)
     {
@@ -28,6 +55,11 @@ class JobModel
 
     public function insert(){
         $data_to_store = array_filter($_POST);
+        if(empty($data_to_store['id_recruiter'])){
+            unset($data_to_store['id_student']);
+        }else{
+            unset($data_to_store['id_recruiter']);
+        }
         $last_id = $this->db->insert('job', $data_to_store);
         return $last_id;
     }

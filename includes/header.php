@@ -88,7 +88,7 @@
                                 </li>
 
                                 <li <?php echo (CURRENT_PAGE == "job.php" || CURRENT_PAGE == "add_job.php") ? 'class="active"' : ''; ?>>
-                                    <a href="http://localhost/AmericaWork/views/job/job.php"><i class="fa fa-building fa-fw"></i> Annonces</a>
+                                    <a href="http://localhost/AmericaWork/views/job/job.php"><i class="fa fa-briefcase fa-fw"></i> Annonces</a>
                                 </li>
 
                             </ul>

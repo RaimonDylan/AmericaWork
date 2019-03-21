@@ -30,7 +30,7 @@ include_once '../../includes/header.php';
         </div>
         <div class="col-lg-6" style="">
             <div class="page-action-links text-right">
-	            <a href="add_company.php">
+	            <a href="add_job.php">
 	            	<button class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Ajouter </button>
 	            </a>
             </div>
@@ -85,7 +85,7 @@ include_once '../../includes/header.php';
 						      
 						        		<input type="hidden" name="del_id" id = "del_id" value="<?php echo $job['id_job'] ?>">
 						        	
-						          <p>Etes-vous sûr de bien vouloir supprimer cette entreprise ?</p>
+						          <p>Etes-vous sûr de bien vouloir supprimer cette annonce ?</p>
 						        </div>
 						        <div class="modal-footer">
 						         	<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Non</button>

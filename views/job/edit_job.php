@@ -2,19 +2,22 @@
 session_start();
 require_once '../../config/config.php';
 require_once '../../includes/auth_validate.php';
-require_once "../../controller/Company.php";
-require_once "../../model/CompanyModel.php";
+require_once "../../controller/Job.php";
+require_once "../../model/JobModel.php";
 
-$company_id = filter_input(INPUT_GET, 'company_id', FILTER_VALIDATE_INT);
+$job_id = filter_input(INPUT_GET, 'job_id', FILTER_VALIDATE_INT);
 $db = getDbInstance();
-$model = new CompanyModel($db);
-$controller = new Company($model);
+$model = new JobModel($db);
+$controller = new Job($model);
 $edit = true;
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST')
-    $controller->edit($company_id);
+$recruiters = $controller->getAllRecruiters();
+$students = $controller->getAllStudents();
 
-$company = $controller->edit($company_id);
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+    $controller->edit($job_id);
+
+$job = $controller->edit($job_id);
 ?>
 
 <?php
@@ -22,7 +25,7 @@ $company = $controller->edit($company_id);
 ?>
 <div id="page-wrapper">
     <div class="row">
-        <h2 class="page-header">Modifier une entreprise</h2>
+        <h2 class="page-header">Modifier une annonce</h2>
     </div>
     <!-- Flash messages -->
     <?php
@@ -32,7 +35,7 @@ $company = $controller->edit($company_id);
     <form class="" action="" method="post" enctype="multipart/form-data" id="contact_form">
         
         <?php
-            require_once('../forms/company_form.php');
+            require_once('../forms/job_form.php');
         ?>
     </form>
 </div>

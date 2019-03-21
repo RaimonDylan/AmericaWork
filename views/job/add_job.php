@@ -2,17 +2,20 @@
 session_start();
 require_once '../../config/config.php';
 require_once '../../includes/auth_validate.php';
-require_once "../../controller/Company.php";
-require_once "../../model/CompanyModel.php";
+require_once "../../controller/Job.php";
+require_once "../../model/JobModel.php";
+
+$db = getDbInstance();
+$model = new JobModel($db);
+$controller = new Job($model);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
-    $db = getDbInstance();
-    $model = new CompanyModel($db);
-    $controller = new Company($model);
     $controller->create();
 }
 
+$recruiters = $controller->getAllRecruiters();
+$students = $controller->getAllStudents();
 $edit = false;
 
 require_once '../../includes/header.php';
@@ -20,12 +23,12 @@ require_once '../../includes/header.php';
 <div id="page-wrapper">
 <div class="row">
      <div class="col-lg-12">
-            <h2 class="page-header">Ajouter une entreprise</h2>
+            <h2 class="page-header">Ajouter une annonce</h2>
         </div>
         
 </div>
     <form class="form" action="" method="post"  id="customer_form" enctype="multipart/form-data">
-       <?php  include_once('../forms/company_form.php'); ?>
+       <?php  include_once('../forms/job_form.php'); ?>
     </form>
 </div>
 
@@ -34,9 +37,9 @@ require_once '../../includes/header.php';
 $(document).ready(function(){
    $("#customer_form").validate({
        rules: {
-            name: {
+            typeContrat: {
                 required: true,
-                minlength: 3
+                minlength: 1
             }
         }
     });

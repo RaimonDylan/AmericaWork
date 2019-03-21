@@ -13,6 +13,15 @@ class Job{
         //require 'view/user/list.php';
     }
 
+    public function getAllStudents(){
+        return $students = $this->model->getAllStudents();
+    }
+
+    public function getAllRecruiters(){
+        return $recruiters = $this->model->getAllRecruiters();
+    }
+
+
     public function create()
     {
         if ($_POST) {
