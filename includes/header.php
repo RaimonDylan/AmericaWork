@@ -79,6 +79,11 @@
                                     <a href="http://localhost/AmericaWork/views/user/user.php"><i class="fa fa-user-circle fa-fw"></i> Utilisateurs</a>
                                 </li>
 
+                                <li <?php echo (CURRENT_PAGE == "recruiter.php" || CURRENT_PAGE == "add_recruiter.php") ? 'class="active"' : ''; ?>>
+                                    <a href="http://localhost/AmericaWork/views/recruiter/recruiter.php"><i class="fa fa-user-circle fa-fw"></i> Recruteur</a>
+                                </li>
+
+
                                 <li <?php echo (CURRENT_PAGE == "student.php" || CURRENT_PAGE == "add_student.php") ? 'class="active"' : ''; ?>>
                                     <a href="http://localhost/AmericaWork/views/student/student.php"><i class="fa fa-user-circle fa-fw"></i> Étudiants</a>
                                 </li>

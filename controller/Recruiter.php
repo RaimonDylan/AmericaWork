@@ -1,5 +1,5 @@
 <?php 
-class Student{
+class Recruiter{
     protected $model = '';
 
     public function __construct($model)
@@ -9,13 +9,13 @@ class Student{
 
     public function index($page)
     {
-        return $student = $this->model->getAllStudent($page);
+        return $recruiter = $this->model->getAllRecruiter($page);
         //require 'view/user/list.php';
     }
 
     public function all_user()
     {
-        return $student = $this->model->getAllUser();
+        return $recruiter = $this->model->getAllUser();
         //require 'view/user/list.php';
     }
 
@@ -25,8 +25,8 @@ class Student{
             $last_id = $this->model->insert();
             if($last_id)
             {
-                $_SESSION['success'] = "Étudiant ajouté avec succès!";
-                header('location: student.php');
+                $_SESSION['success'] = "Recruteur ajouté avec succès!";
+                header('location: recruiter.php');
                 exit();
             }
         }
@@ -37,11 +37,11 @@ class Student{
         if ($_POST) {
             $stat = $this->model->update($id);
             if($stat) {
-                $_SESSION['success'] = "Étudiant modifié avec succès!";
-                header('location: student.php');
+                $_SESSION['success'] = "Recruteur modifié avec succès!";
+                header('location: recruiter.php');
             }
         } else {
-            return $student = $this->model->getStudentById($id);
+            return $recruiter = $this->model->getRecruiterById($id);
         }
     }
 
@@ -50,11 +50,11 @@ class Student{
         if ($id) {
             $status = $this->model->delete($id);
             if ($status) {
-                $_SESSION['info'] = "Étudiant supprimé avec succès!";
-                header('location: student.php');
+                $_SESSION['info'] = "Recruteur supprimé avec succès!";
+                header('location: recruiter.php');
             } else {
-                $_SESSION['failure'] = "Suppression de l'étudiant échoué";
-                header('location: student.php');
+                $_SESSION['failure'] = "Suppression du recruteur échoué";
+                header('location: recruiter.php');
             }
         }
     }
