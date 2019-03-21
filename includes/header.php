@@ -78,6 +78,11 @@
                                 <li <?php echo (CURRENT_PAGE == "user.php" || CURRENT_PAGE == "add_user.php") ? 'class="active"' : ''; ?>>
                                     <a href="http://localhost/AmericaWork/views/user/user.php"><i class="fa fa-user-circle fa-fw"></i> Utilisateurs</a>
                                 </li>
+
+                                <li <?php echo (CURRENT_PAGE == "company.php" || CURRENT_PAGE == "add_company.php") ? 'class="active"' : ''; ?>>
+                                    <a href="http://localhost/AmericaWork/views/company/company.php"><i class="fa fa-building fa-fw"></i> Entreprises</a>
+                                </li>
+
                             </ul>
                         </div>
                         <!-- /.sidebar-collapse -->
