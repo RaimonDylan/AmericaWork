@@ -83,6 +83,10 @@
                                     <a href="http://localhost/AmericaWork/views/company/company.php"><i class="fa fa-building fa-fw"></i> Entreprises</a>
                                 </li>
 
+                                <li <?php echo (CURRENT_PAGE == "job.php" || CURRENT_PAGE == "add_job.php") ? 'class="active"' : ''; ?>>
+                                    <a href="http://localhost/AmericaWork/views/job/job.php"><i class="fa fa-building fa-fw"></i> Annonces</a>
+                                </li>
+
                             </ul>
                         </div>
                         <!-- /.sidebar-collapse -->
