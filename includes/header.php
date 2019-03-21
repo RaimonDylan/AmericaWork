@@ -76,11 +76,11 @@
                                 </li>
 
                                 <li <?php echo (CURRENT_PAGE == "user.php" || CURRENT_PAGE == "add_user.php") ? 'class="active"' : ''; ?>>
-                                    <a href="http://localhost/AmericaWork/views/user/user.php"><i class="fa fa-user-circle fa-fw"></i> Utilisateurs</a>
+                                    <a href="http://localhost/AmericaWork/views/user/user.php"><i class="fa fa-users fa-fw"></i> Utilisateurs</a>
                                 </li>
 
                                 <li <?php echo (CURRENT_PAGE == "recruiter.php" || CURRENT_PAGE == "add_recruiter.php") ? 'class="active"' : ''; ?>>
-                                    <a href="http://localhost/AmericaWork/views/recruiter/recruiter.php"><i class="fa fa-user-circle fa-fw"></i> Recruteur</a>
+                                    <a href="http://localhost/AmericaWork/views/recruiter/recruiter.php"><i class="fa fa-user-circle fa-fw"></i> Recruteurs</a>
                                 </li>
 
 
@@ -94,6 +94,10 @@
 
                                 <li <?php echo (CURRENT_PAGE == "job.php" || CURRENT_PAGE == "add_job.php") ? 'class="active"' : ''; ?>>
                                     <a href="http://localhost/AmericaWork/views/job/job.php"><i class="fa fa-briefcase fa-fw"></i> Annonces</a>
+                                </li>
+
+                                <li <?php echo (CURRENT_PAGE == "skill.php" || CURRENT_PAGE == "add_skill.php") ? 'class="active"' : ''; ?>>
+                                    <a href="http://localhost/AmericaWork/views/skill/skill.php"><i class="fa fa-briefcase fa-fw"></i> Compétences</a>
                                 </li>
 
                             </ul>

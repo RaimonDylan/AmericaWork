@@ -19,8 +19,8 @@ class JobModel
         return $jobs;
     }
     public function getAllRecruiters(){
-        $recruiters = $this->db->arraybuilder()->paginate("recruiter", 1);
-        $users = $this->db->arraybuilder()->paginate("user", 1);
+        $recruiters = $this->db->get("recruiter");
+        $users = $this->db->get("user");
         $arr = array();
         foreach ($users as $user){
             foreach ($recruiters as $recruiter){
@@ -33,8 +33,8 @@ class JobModel
     }
 
     public function getAllStudents(){
-        $students = $this->db->arraybuilder()->paginate("student", 1);
-        $users = $this->db->arraybuilder()->paginate("user", 1);
+        $students = $this->db->get("student");
+        $users = $this->db->get("user");
         $arr = array();
         foreach ($users as $user){
             foreach ($students as $student){

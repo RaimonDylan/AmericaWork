@@ -202,6 +202,35 @@ body {
   color: #df8a13;
 }
 
+.panel-rose {
+  border-color: #ff66a3;
+}
+.panel-rose > .panel-heading {
+  border-color: #ff66a3;
+  color: white;
+background-color: #ff66a3;
+}
+.panel-rose > a {
+  color: #ff66a3;
+}
+.panel-rose > a:hover {
+  color: #ff3284;
+}
+
+.panel-violet{
+  border-color: #ab32ff;
+}
+.panel-violet > .panel-heading {
+  border-color: #ab32ff;
+  color: white;
+  background-color: #ab32ff;
+}
+.panel-violet > a {
+  color: #ab32ff;
+}
+.panel-violet > a:hover {
+  color: #9600ff;
+}
 label.error{
   color: red;
 }

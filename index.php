@@ -12,6 +12,7 @@ $numStudents = $db->getValue ("student", "count(*)");
 $numRecruiters = $db->getValue ("recruiter", "count(*)");
 $numCompany = $db->getValue ("company", "count(*)");
 $numAnnonces = $db->getValue ("job", "count(*)");
+$numSkill = $db->getValue ("skill", "count(*)");
 
 include_once('includes/header.php');
 ?>
@@ -59,7 +60,7 @@ include_once('includes/header.php');
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="views/recruiter/recruiter.php">
                     <div class="panel-footer">
                         <span class="pull-left">Voir détails</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -113,7 +114,7 @@ include_once('includes/header.php');
             </div>
         </div>
         <div class="col-lg-3 col-md-6">
-            <div class="panel panel-default">
+            <div class="panel panel-violet">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-3">
@@ -126,6 +127,28 @@ include_once('includes/header.php');
                     </div>
                 </div>
                 <a href="views/job/job.php">
+                    <div class="panel-footer">
+                        <span class="pull-left">Voir détails</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-rose">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-briefcase fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"><?php echo $numSkill; ?></div>
+                            <div>Compétences</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="views/skill/skill.php">
                     <div class="panel-footer">
                         <span class="pull-left">Voir détails</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

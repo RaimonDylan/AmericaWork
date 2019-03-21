@@ -29,7 +29,7 @@ class StudentModel
     }
 
     public function getAllUser(){
-        $users = $this->db->arraybuilder()->paginate("user", 1);
+        $users = $this->db->get("user");
         return $users;
     }
 
