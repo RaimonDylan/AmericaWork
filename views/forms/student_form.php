@@ -1,8 +1,8 @@
 <fieldset>
     <div class="form-group">
-        <label>ID Utilisateur </label>
+        <label>Utilisateur *</label>
         <select name="id_user" class="form-control selectpicker" required>
-            <option value=" " >Please select your state</option>
+            <option value=" " >Selectionner un utilisateur</option>
             <?php
                 foreach ($users as $user) {
                     if ($edit && $user['id_user'] == $student['id_user']) {
