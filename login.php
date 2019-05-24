@@ -10,7 +10,7 @@ if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === TRUE) 
 }
 
 include_once 'includes/header.php';
-?>
+    ?>
 <div id="page-" class="col-md-4 col-md-offset-4">
 	<form class="form loginform" method="POST" action="authenticate.php">
 		<div class="login-panel panel panel-default">
