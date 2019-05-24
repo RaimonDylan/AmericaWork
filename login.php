@@ -6,7 +6,7 @@ $token = bin2hex(openssl_random_pseudo_bytes(16));
 
 //If User has already logged in, redirect to dashboard page.
 if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === TRUE) {
-	header('Location:index.php');
+	header('Location:admin.php');
 }
 
 include_once 'includes/header.php';

@@ -18,6 +18,17 @@ class JobModel
         $jobs = $this->db->arraybuilder()->paginate("job", $page);
         return $jobs;
     }
+
+    public function getAllJobArray(){
+        $jobs = $this->db->query("SELECT * FROM job NATURAL JOIN company ORDER BY created_at DESC");
+        return $jobs;
+    }
+
+    public function getCompanyByUser($id_user){
+        $company = $this->db->query("SELECT * FROM `company` WHERE id_company IN (SELECT id_company FROM recruiter_company NATURAL JOIN recruiter NATURAL JOIN user WHERE user.id_user = $id_user)");
+        return $company;
+    }
+
     public function getAllRecruiters(){
         $recruiters = $this->db->get("recruiter");
         $users = $this->db->get("user");
@@ -46,6 +57,11 @@ class JobModel
         return $arr;
     }
 
+    public function getAllCompany(){
+        $company = $this->db->get("company");
+        return $company;
+    }
+
     public function getJobById($id)
     {
         $this->db->where('id_job', $id);
@@ -55,10 +71,11 @@ class JobModel
 
     public function insert(){
         $data_to_store = array_filter($_POST);
+
         if(empty($data_to_store['id_recruiter'])){
-            unset($data_to_store['id_student']);
-        }else{
             unset($data_to_store['id_recruiter']);
+        }else{
+            unset($data_to_store['id_student']);
         }
         $last_id = $this->db->insert('job', $data_to_store);
         return $last_id;
@@ -67,6 +84,11 @@ class JobModel
     public function update(){
         $job_id = filter_input(INPUT_GET, 'job_id', FILTER_SANITIZE_STRING);
         $data_to_update = filter_input_array(INPUT_POST);
+        if(empty($data_to_update['id_recruiter'])){
+            unset($data_to_update['id_recruiter']);
+        }else{
+            unset($data_to_update['id_student']);
+        }
         $this->db->where('id_job',$job_id);
         $stat = $this->db->update('job', $data_to_update);
         return $stat;

@@ -10,8 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$db = getDbInstance();
 
 	$db->where("user_name", $username);
+    $row = $db->get('admin');
 
-	$row = $db->get('admin');
 
 	if ($db->count >= 1) {
 
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 			$_SESSION['user_logged_in'] = TRUE;
 			$_SESSION['admin_type'] = $row[0]['admin_type'];
-			header('Location:index.php');
+			header('Location:admin.php');
 
 		} else {
 			$_SESSION['login_failure'] = "Nom d'utilisateur ou mot de passe invalide";
@@ -31,8 +31,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 		exit;
 	} else {
-		$_SESSION['login_failure'] = "Nom d'utilisateur ou mot de passe invalide";
-		header('Location:login.php');
+        $db->where("login", $username);
+        $row = $db->get('user');
+        $db_password = $row[0]['password'];
+        $user_id = $row[0]['id_user'];
+        if (password_verify($passwd, $db_password)) {
+
+            $_SESSION['user_logged_in'] = TRUE;
+            $_SESSION['admin_type'] = "recruteur";
+            $_SESSION['id_user'] = $user_id;
+            $db->where("id_user", $user_id);
+            $row = $db->get('recruiter');
+            if ($db->count >= 1) {
+                $_SESSION['id_recruiter'] = $row[0]['id_recruiter'];
+            }
+            header('Location:index.php');
+
+        } else {
+            $_SESSION['login_failure'] = "Nom d'utilisateur ou mot de passe invalide";
+            header('Location:login.php');
+        }
 		exit;
 	}
 

@@ -41,9 +41,54 @@
     </div>
 
     <div class="form-group">
-        <label for="typeContract">Type du contrat *</label>
-        <input type="text" name="typeContract" value="<?php echo $edit ? $job['typeContract'] : ''; ?>" placeholder="Type du contrat" class="form-control" required="required" id = "typeContract" readonly onfocus="this.removeAttribute('readonly');">
+        <label>Entreprise</label>
+        <select name="id_company" class="form-control selectpicker">
+            <option value=" " >Selectionner une entreprise</option>
+            <?php
+            foreach ($company as $oneCompany) {
+                if ($edit && $oneCompany['id_company'] == $job['id_company']) {
+                    $sel = "selected";
+                } else {
+                    $sel = "";
+                }
+                $id_company = $oneCompany['id_company'];
+                $nom_company = $oneCompany['name'];
+                echo '<option value="'.$id_company.'"' . $sel . '>' . $nom_company . '</option>';
+            }
+
+            ?>
+        </select>
     </div>
+
+    <div class="form-group">
+        <label for="typeContract">Type du contrat *</label>
+        <select name="typeContract" class="form-control selectpicker">
+            <option value=" " >Selectionner le type du contrat</option>
+            <?php
+            $typeContrat = array("fulltime" => "Temps plein","parttime" => "Temps partiel","freelance" => "Freelance","internship" => "Stage");
+            foreach ($typeContrat as $idContrat => $contrat) {
+                if ($edit && $idContrat == $job['typeContract']) {
+                    $sel = "selected";
+                } else {
+                    $sel = "";
+                }
+                echo '<option value="'.$idContrat.'"' . $sel . '>' . $contrat . '</option>';
+            }
+
+            ?>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="jobTitle">Titre</label>
+        <input type="text" name="jobTitle" value="<?php echo $edit ? $job['jobTitle'] : ''; ?>" placeholder="Titre" class="form-control" required="required" id = "jobTitle" readonly onfocus="this.removeAttribute('readonly');">
+    </div>
+
+    <div class="form-group">
+        <label for="location">Localisation</label>
+        <input type="text" name="location" value="<?php echo $edit ? $job['location'] : ''; ?>" placeholder="Localisation" class="form-control" required="required" id = "location" readonly onfocus="this.removeAttribute('readonly');">
+    </div>
+
     <div class="form-group">
         <label for="dtDebut">Date de début</label>
         <input type="date" name="dtDebut" value="<?php echo $edit ? $job['dtDebut'] : ''; ?>" placeholder="" class="form-control" required="required" id = "dtDebut" readonly onfocus="this.removeAttribute('readonly');">
@@ -57,6 +102,11 @@
     <div class="form-group">
         <label for="experience">Expérience</label>
         <input type="text" name="experience" value="<?php echo $edit ? $job['experience'] : ''; ?>" placeholder="Expériences" class="form-control" required="required" id = "experience" readonly onfocus="this.removeAttribute('readonly');">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea type="text" name="description" class="form-control" required="required" id = "description" readonly onfocus="this.removeAttribute('readonly');"><?php echo $edit ? $job['description'] : ''; ?></textarea>
     </div>
 
 

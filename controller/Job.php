@@ -13,12 +13,24 @@ class Job{
         //require 'view/user/list.php';
     }
 
+    public function getAllJob(){
+        return $jobs = $this->model->getAllJobArray();
+    }
+
     public function getAllStudents(){
         return $students = $this->model->getAllStudents();
     }
 
     public function getAllRecruiters(){
         return $recruiters = $this->model->getAllRecruiters();
+    }
+
+    public function getAllCompany(){
+        return $recruiters = $this->model->getAllCompany();
+    }
+
+    public function getCompanyByUser($id_user){
+        return $company = $this->model->getCompanyByUser($id_user);
     }
 
 
@@ -29,7 +41,12 @@ class Job{
             if($last_id)
             {
                 $_SESSION['success'] = "Annonce ajouté avec succès!";
-                header('location: job.php');
+                if($_SESSION['admin_type']=="super"){
+                    header('location: job.php');
+                }else{
+                    header('location: ../../index.php');
+                }
+
                 exit();
             }
         }

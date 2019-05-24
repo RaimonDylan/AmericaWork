@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
 $recruiters = $controller->getAllRecruiters();
 $students = $controller->getAllStudents();
+$company = $controller->getAllCompany();
 $edit = false;
 
 require_once '../../includes/header.php';

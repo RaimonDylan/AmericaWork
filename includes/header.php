@@ -9,7 +9,15 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Administrator</title>
+        <title>
+            <?php
+                if($_SESSION['admin_type'] == "super"){
+                    echo "Administrator";
+                }else{
+                    echo "America Work";
+                }
+                ?>
+        </title>
 
         <!-- Bootstrap Core CSS -->
         <link  rel="stylesheet" href="http://localhost/AmericaWork/res/css/bootstrap.min.css"/>
@@ -46,7 +54,12 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="">Administration</a>
+                        <?php if ($_SESSION['admin_type'] == "super"):?>
+                            <a class="navbar-brand" href="">Administration</a>
+                        <?php endif;?>
+                        <?php if ($_SESSION['admin_type'] == "etudiant"):?>
+                            <a class="navbar-brand" href=""><?php echo $_SESSION['l_name']." ".$_SESSION['f_name']?></a>
+                        <?php endif;?>
                     </div>
 
                     <ul class="nav navbar-top-links navbar-right">
@@ -55,13 +68,6 @@
                                 <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-user">
-                                <!--
-                                <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                                </li>
-                                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                                </li>
-                                <li class="divider"></li>
-                                !-->
                                 <li><a href="http://localhost/AmericaWork/logout.php"><i class="fa fa-sign-out fa-fw"></i>Déconnexion</a>
                                 </li>
                             </ul>
@@ -72,8 +78,9 @@
                         <div class="sidebar-nav navbar-collapse">
                             <ul class="nav" id="side-menu">
                                 <li>
-                                    <a href="http://localhost/AmericaWork/index.php"><i class="fa fa-dashboard fa-fw"></i> Tableau de bord</a>
+                                    <a href="http://localhost/AmericaWork/admin.php"><i class="fa fa-dashboard fa-fw"></i> Tableau de bord</a>
                                 </li>
+                                <?php if ($_SESSION['admin_type'] == "super"):?>
 
                                 <li <?php echo (CURRENT_PAGE == "user.php" || CURRENT_PAGE == "add_user.php") ? 'class="active"' : ''; ?>>
                                     <a href="http://localhost/AmericaWork/views/user/user.php"><i class="fa fa-users fa-fw"></i> Utilisateurs</a>
@@ -99,7 +106,7 @@
                                 <li <?php echo (CURRENT_PAGE == "skill.php" || CURRENT_PAGE == "add_skill.php") ? 'class="active"' : ''; ?>>
                                     <a href="http://localhost/AmericaWork/views/skill/skill.php"><i class="fa fa-briefcase fa-fw"></i> Compétences</a>
                                 </li>
-
+                                <?php endif;?>
                             </ul>
                         </div>
                         <!-- /.sidebar-collapse -->
