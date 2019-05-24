@@ -15,10 +15,13 @@ require_once BASE_PATH . '/helpers/helpers.php';
 |--------------------------------------------------------------------------
  */
 
-define('DB_HOST', "localhost");
-define('DB_USER', "root");
-define('DB_PASSWORD', "");
-define('DB_NAME', "america");
+    define('DB_HOST', "91.121.155.160");
+	define('DB_USER', "stmncv1");
+	define('DB_PASSWORD', "awxDUFly7T7eq4dn");
+	define('DB_NAME', "stmncv1");
+
+
+
 
 /**
  * Get instance of DB object

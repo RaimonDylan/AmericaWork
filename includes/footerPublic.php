@@ -37,17 +37,17 @@
 </footer>
 </div>
 
-<script src="http://localhost/AmericaWork/res/js/jquery-3.3.1.min.js"></script>
-<script src="http://localhost/AmericaWork/res/js/jquery-migrate-3.0.1.min.js"></script>
-<script src="http://localhost/AmericaWork/res/js/jquery-ui.js"></script>
-<script src="http://localhost/AmericaWork/res/js/popper.min.js"></script>
-<script src="http://localhost/AmericaWork/res/js/bootstrap.min.js"></script>
-<script src="http://localhost/AmericaWork/res/js/owl.carousel.min.js"></script>
-<script src="http://localhost/AmericaWork/res/js/jquery.stellar.min.js"></script>
-<script src="http://localhost/AmericaWork/res/js/jquery.countdown.min.js"></script>
-<script src="http://localhost/AmericaWork/res/js/jquery.magnific-popup.min.js"></script>
-<script src="http://localhost/AmericaWork/res/js/bootstrap-datepicker.min.js"></script>
-<script src="http://localhost/AmericaWork/res/js/aos.js"></script>
+<script src="http://stmncv1.fr/res/js/jquery-3.3.1.min.js"></script>
+<script src="http://stmncv1.fr/res/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="http://stmncv1.fr/res/js/jquery-ui.js"></script>
+<script src="http://stmncv1.fr/res/js/popper.min.js"></script>
+<script src="http://stmncv1.fr/res/js/bootstrap.min.js"></script>
+<script src="http://stmncv1.fr/res/js/owl.carousel.min.js"></script>
+<script src="http://stmncv1.fr/res/js/jquery.stellar.min.js"></script>
+<script src="http://stmncv1.fr/res/js/jquery.countdown.min.js"></script>
+<script src="http://stmncv1.fr/res/js/jquery.magnific-popup.min.js"></script>
+<script src="http://stmncv1.fr/res/js/bootstrap-datepicker.min.js"></script>
+<script src="http://stmncv1.fr/res/js/aos.js"></script>
 
 <script>
     // This example displays an address form, using the autocomplete feature
@@ -121,4 +121,4 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&libraries=places&callback=initAutocomplete"
         async defer></script>
 
-<script src="http://localhost/AmericaWork/res/js/main.js"></script>
+<script src="http://stmncv1.fr/res/js/main.js"></script>
