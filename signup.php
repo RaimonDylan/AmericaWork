@@ -34,11 +34,11 @@ include_once 'includes/header.php';
                 </div>
                 <div class="form-group">
                     <label class="control-label">Téléphone</label>
-                    <input type="text" name="phone" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+                    <input type="tel"  name="phone" class="form-control" readonly onfocus="this.removeAttribute('readonly');" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$">
                 </div>
                 <div class="form-group">
                     <label class="control-label">Adresse mail</label>
-                    <input type="text" name="email" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+                    <input type="email" name="email" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
                 </div>
                 <div class="form-group">
                     <label class="control-label">Adresse</label>
@@ -50,7 +50,7 @@ include_once 'includes/header.php';
                 </div>
                 <div class="form-group">
                     <label class="control-label">Code postal</label>
-                    <input type="text" name="pc" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+                    <input type="text" maxlength="5" pattern="[0-9]{5}" name="pc" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
                 </div>
                 <div class="form-group">
                     <input class="typeSignup" type="radio" name="choice" value="student"> Élève<br>
@@ -59,11 +59,11 @@ include_once 'includes/header.php';
                 <div style="display: none;" class="student">
                     <div class="form-group">
                         <label class="control-label">Site web</label>
-                        <input type="text" name="siteweb" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+                        <input type="url" name="siteweb" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
                     </div>
                     <div class="form-group">
                         <label class="control-label">Description</label>
-                        <input type="text" name="description" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+                        <textarea type="text" name="description" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
                     </div>
                     <div class="form-group">
                         <label class="control-label">Twitter</label>
