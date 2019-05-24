@@ -15,7 +15,7 @@ class RecruiterModel
     }
 
     public function getAllRecruiter($page){
-        $Recruiters = $this->db->arraybuilder()->paginate("Recruiter", $page);
+        $Recruiters = $this->db->arraybuilder()->paginate("recruiter", $page);
         $users = $this->db->arraybuilder()->paginate("user", $page);
         $superRecruiter = array();
         foreach ($users as $user){

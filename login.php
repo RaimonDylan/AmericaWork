@@ -25,11 +25,17 @@ include_once 'includes/header.php';
 					<input type="password" name="passwd" class="form-control" required="required" readonly onfocus="this.removeAttribute('readonly');">
 				</div>
 				<?php if (isset($_SESSION['login_failure'])) {?>
-				<div class="alert alert-danger alert-dismissable fade in">
-					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-					<?php echo $_SESSION['login_failure'];unset($_SESSION['login_failure']); ?>
-				</div>
-				<?php }?>
+                    <div class="alert alert-danger alert-dismissable fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <?php echo $_SESSION['login_failure'];unset($_SESSION['login_failure']); ?>
+                    </div>
+                <?php }?>
+                <?php if (isset($_SESSION['signup_success'])) {?>
+                    <div class="alert alert-info alert-dismissable fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <?php echo $_SESSION['signup_success'];unset($_SESSION['signup_success']); ?>
+                    </div>
+                <?php }?>
 				<button type="submit" class="btn btn-success loginField" >Connexion</button>
 			</div>
 		</div>

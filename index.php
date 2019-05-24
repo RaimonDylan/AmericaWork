@@ -98,7 +98,7 @@ include_once('includes/headerPublic.php');
 
                           <div class="ml-auto">
                               <?php if (isset($_SESSION['user_logged_in'])) {
-                                  echo ' <a href="job-single.php" class="btn btn-primary py-2">Postuler</a>';
+                                  echo ' <a href="#" class="btn btn-primary py-2">Postuler</a>';
                               }?>
                           </div>
 

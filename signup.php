@@ -16,6 +16,12 @@ include_once 'includes/header.php';
 		<div class="login-panel panel panel-default">
 			<div class="panel-heading">Formulaire d'inscription ci-dessous</div>
 			<div class="panel-body">
+                <?php if (isset($_SESSION['fail'])) {?>
+                    <div class="alert alert-danger alert-dismissable fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <?php echo $_SESSION['fail'];unset($_SESSION['fail']); ?>
+                    </div>
+                <?php }?>
 				<div class="form-group">
 					<label class="control-label">Nom d'utilisateur</label>
 					<input type="text" required="required" name="login" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
@@ -63,7 +69,7 @@ include_once 'includes/header.php';
                     </div>
                     <div class="form-group">
                         <label class="control-label">Description</label>
-                        <textarea type="text" rows="4" cols="50" name="description" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+                        <textarea type="text" style="resize: none;" rows="4" cols="50" name="description" class="form-control" readonly onfocus="this.removeAttribute('readonly');"></textarea>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Twitter</label>
@@ -75,7 +81,7 @@ include_once 'includes/header.php';
                     </div>
                     <div class="form-group">
                         <label class="control-label">Hobbies</label>
-                        <textarea type="text" rows="4" cols="50" name="hobbies" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
+                        <textarea type="text" style="resize: none;" rows="4" cols="50" name="hobbies" class="form-control" readonly onfocus="this.removeAttribute('readonly');"></textarea>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success loginField" >Valider</button>

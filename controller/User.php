@@ -31,9 +31,12 @@ class User{
             $last_id = $this->model->insertNew();
             if($last_id)
             {
-                $_SESSION['success'] = "Utilisateur ajouté avec succès!";
-                header('location: ../../index.php');
+                $_SESSION['signup_success'] = "Utilisateur ajouté avec succès!";
+                header('location: ../../login.php');
                 exit();
+            }else{
+                $_SESSION['fail'] = "Echec de la création de l'utilisateur";
+                header('location: ../../signup.php');
             }
         }
     }
