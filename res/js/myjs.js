@@ -2,14 +2,12 @@
 
 jQuery(document).ready(function($) {
 
-	$('body').on('click', '.arrow-collapse', function(e) {
-		var $this = $(this);
-		if ( $this.closest('li').find('.collapse').hasClass('show') ) {
-			$this.removeClass('active');
-		} else {
-			$this.addClass('active');
+	$('.typeSignup').on('change', function() {
+		let choix = $('input[name="choice"]:checked').val();
+		if(choix == "student"){
+			$('.student').show();
+		}else{
+			$('.student').hide();
 		}
-		e.preventDefault();
-
 	});
 });
