@@ -9,14 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>
-            <?php
-                if($_SESSION['admin_type'] == "super"){
-                    echo "Administrator";
-                }else{
-                    echo "America Work";
-                }
-                ?>
+        <title>America Work
         </title>
 
         <!-- Bootstrap Core CSS -->

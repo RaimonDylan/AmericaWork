@@ -25,6 +25,18 @@ class User{
             }
         }
     }
+    public function createNew()
+    {
+        if ($_POST) {
+            $last_id = $this->model->insertNew();
+            if($last_id)
+            {
+                $_SESSION['success'] = "Utilisateur ajouté avec succès!";
+                header('location: ../../index.php');
+                exit();
+            }
+        }
+    }
 
     public function edit($id)
     {

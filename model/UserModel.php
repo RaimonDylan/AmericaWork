@@ -33,6 +33,33 @@ class UserModel
         return $last_id;
     }
 
+    public function insertNew(){
+        $data_to_store = array_filter($_POST);
+        $infoUser['login'] = $data_to_store['login'];
+        $infoUser['password'] = password_hash($data_to_store['password'],PASSWORD_DEFAULT);
+        $infoUser['l_name'] = $data_to_store['l_name'];
+        $infoUser['f_name'] = $data_to_store['f_name'];
+        $infoUser['phone'] = $data_to_store['phone'];
+        $infoUser['email'] = $data_to_store['email'];
+        $infoUser['address'] = $data_to_store['address'];
+        $infoUser['city'] = $data_to_store['city'];
+        $infoUser['pc'] = $data_to_store['pc'];
+        $last_id = $this->db->insert('user', $infoUser);
+        if(isset($data_to_store['siteweb'])){
+            $infoStudent['id_user'] = $last_id;
+            $infoStudent['siteweb'] = $data_to_store['siteweb'];
+            $infoStudent['description'] = $data_to_store['description'];
+            $infoStudent['twitter'] = $data_to_store['twitter'];
+            $infoStudent['facebook'] = $data_to_store['facebook'];
+            $infoStudent['hobbies'] = $data_to_store['hobbies'];
+            $last_id = $this->db->insert('student', $infoStudent);
+        }else{
+            $infoRecruiter['id_user'] = $last_id;
+            $last_id = $this->db->insert('recruiter', $infoRecruiter);
+        }
+        return $last_id;
+    }
+
     public function update(){
         $user_id = filter_input(INPUT_GET, 'user_id', FILTER_SANITIZE_STRING);
         $data_to_update = filter_input_array(INPUT_POST);
