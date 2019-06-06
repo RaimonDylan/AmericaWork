@@ -20,22 +20,35 @@ $etudiant = $controller->getStudent($student_id);
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-<meta charset="UTF-8">
+<!--<meta charset="UTF-8">-->
 <title>Responsive Resume Template</title>
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="http://stmncv1.fr/res/css/cv.css">
+    <meta http-equiv="Content-Type" content="text/html; Charset=UTF-8" />
+    <script type="text/javascript" src="js/jspdf.min.js"></script>
+    <script type="text/javascript" src="js/html2canvas.js"></script>
+    <script type="text/javascript">
+        function genPDF(nom,prenom) {
+            html2canvas(document.getElementById("HTMLtoPDF"), {
+                onrendered: function (canvas) {
+                    var hauteur = window.innerHeight < 720 ? 620 : 785;
+                    var largeur = window.innerWidth < 1280 ? 1100 : 1550;
+                    var img = canvas.toDataURL("image/png");
+                    var doc = new jsPDF('l','mm',[largeur, hauteur]);
+                    doc.addImage(img, 'JPEG',20,20);
+                    doc.save('CV ' + nom + ' ' + prenom + '.pdf');
+                }
+            });
+        }
+    </script>
 </head>
 
 <body>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<div class="resume-wrapper">
+<div id="HTMLtoPDF" class="resume-wrapper">
   <section class="profile section-padding">
     <div class="container">
-      <div class="picture-resume-wrapper">
-        <div class="picture-resume"> <span><img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" alt="" /></span></div>
-        <div class="clearfix"></div>
-      </div>
       <div class="name-wrapper">
         <h1><?php echo $etudiant['l_name'] ?><br/>
             <?php echo $etudiant['f_name'] ?></h1>
@@ -80,10 +93,6 @@ $etudiant = $controller->getStudent($student_id);
   </section>
 
   <section class="experience section-padding">
-    <div class="section-bouton">
-          <input class="fas fa-file-download" type="image" id="image" alt="Login"
-                 src="/media/examples/login-button.png">
-    </div>
     <div class="container">
       <h3 class="experience-title">Experience</h3>
         <?php foreach ($experiences as $experience) {
@@ -165,5 +174,8 @@ $etudiant = $controller->getStudent($student_id);
   </section>
   <div class="clearfix"></div>
 </div>
+
+<a href="javascript:genPDF('<?php echo $etudiant['f_name'] ?>','<?php echo $etudiant['l_name'] ?>')">Download PDF</a>
+
 </body>
 </html>
