@@ -3,14 +3,14 @@
 
 require_once '../../config/config.php';
 require_once '../../includes/auth_validate.php';
-require_once "../../controller/Job.php";
-require_once "../../model/JobModel.php";
+require_once "../../controller/Company.php";
+require_once "../../model/CompanyModel.php";
 
 
 $db = getDbInstance();
-$model = new JobModel($db);
-$controller = new Job($model);
-$entreprises = $controller->getAllJob($_SESSION['id_recruiter']);
+$model = new CompanyModel($db);
+$controller = new Company($model);
+$entreprises = $controller->getAllCompanyById($_SESSION['id_recruiter']);
 
 
 include_once('../../includes/headerPublic.php');
@@ -19,7 +19,7 @@ include_once('../../includes/headerPublic.php');
     <div class="unit-5 overlay" style="background-image: url('../../res/images/hero_bg_2.jpg');">
       <div class="container text-center">
         <h2 class="mb-0">Mes Entreprises</h2>
-        <p class="mb-0 unit-6"><a href="../../index.php">Accueil</a> <span class="sep">></span> <span>Mes Annonces</span></p>
+        <p class="mb-0 unit-6"><a href="../../index.php">Accueil</a> <span class="sep">></span> <span>Mes Entreprises</span></p>
       </div>
     </div>
 
@@ -30,7 +30,13 @@ include_once('../../includes/headerPublic.php');
     <div class="container">
         <div class="row justify-content-start text-left mb-5">
             <div class="col-md-9" data-aos="fade">
-                <h2 class="font-weight-bold text-black">Mes Entreprises</h2>
+                <h2 class="font-weight-bold text-black mr-3">Mes Entreprises (<?php echo sizeof($entreprises) ?>)</h2>
+            </div>
+            <div class="col-md-3" data-aos="fade" data-aos-delay="200">
+                <?php if (isset($_SESSION['user_logged_in'])) {
+                    echo '<a href="views/company/new-post.php" class="btn btn-primary py-3 btn-block"><span class="h5">+</span> Rejoindre une entreprise</a>';
+                }?>
+
             </div>
         </div>
 
@@ -44,21 +50,21 @@ include_once('../../includes/headerPublic.php');
 
                         <div class="mb-4 mb-md-0 mr-5">
                             <div class="job-post-item-header d-flex align-items-center">
-                                <h2 class="mr-3 text-black h4"><?php echo $job['jobTitle'] ?></h2>
+                                <h2 class="mr-3 text-black h4"><?php echo $entreprise['name'] ?></h2>
                                 <div class="badge-wrap">
-                                    <span class="<?php echo $displayBtn[$job['typeContract']] ?> text-white badge py-2 px-4"><?php echo $typeContrat[$job['typeContract']] ?></span>
+                                    <span class="bg-primary text-white badge py-2 px-4"><?php echo $entreprise['typeSector'] ?></span>
                                 </div>
                             </div>
                             <div class="job-post-item-body d-block d-md-flex">
-                                <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#"><?php echo $job['name'] ?></a></div>
-                                <div><span class="fl-bigmug-line-big104"></span> <span><?php echo $job['location'] ?></span></div>
+                                <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#"><?php echo $entreprise['name'] ?></a></div>
+                                <div><span class="fl-bigmug-line-big104"></span> <span><?php echo $entreprise['city'] ?></span></div>
                             </div>
                         </div>
 
                         <div class="ml-auto">
                             <?php if (isset($_SESSION['user_logged_in'])) {
-                                $id_job = $job['id_job'];
-                                echo "<a href='listeCandidats.php?job_id=$id_job' class='btn btn-primary py-2 viewCandidats'>Voir les candidats</a>";
+                                $id_company = $entreprise['id_company'];
+                                echo "<a href='delete_company.php?company_id=$id_company' class='btn btn-danger py-2'>X</a>";
                             }?>
                         </div>
 

@@ -17,6 +17,10 @@ class Job{
         return $jobs = $this->model->getAllJobArray($id_recruiter);
     }
 
+    public function getInfoJob($id_job = null){
+        return $job = $this->model->getInfoJob($id_job);
+    }
+
     public function getAllStudents(){
         return $students = $this->model->getAllStudents();
     }

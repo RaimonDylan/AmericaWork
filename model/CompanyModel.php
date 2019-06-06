@@ -19,6 +19,11 @@ class CompanyModel
         return $companys;
     }
 
+    public function getAllCompanyById($id_recruiter){
+        $company = $this->db->query("SELECT * FROM `company` WHERE id_company IN (SELECT id_company FROM recruiter_company WHERE id_recruiter = $id_recruiter)");
+        return $company;
+    }
+
     public function getCompanyById($id)
     {
         $this->db->where('id_company', $id);

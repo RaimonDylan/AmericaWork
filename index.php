@@ -58,8 +58,9 @@ include_once('includes/headerPublic.php');
           </div>
         </div>
       </div>
-    </div>  
-    
+    </div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.3"></script>
 
     <div class="site-section bg-light">
       <div class="container">
@@ -85,19 +86,20 @@ include_once('includes/headerPublic.php');
 
                           <div class="mb-4 mb-md-0 mr-5">
                               <div class="job-post-item-header d-flex align-items-center">
-                                  <h2 class="mr-3 text-black h4"><?php echo $job['jobTitle'] ?></h2>
+                                  <?php echo "<h2 class='mr-3 text-black h4'><a href='http://stmncv1.fr/views/job/look-post.php?job_id=".$job['id_job']."' style='color:black;'>".$job['jobTitle']."</a></h2>" ?>
                                   <div class="badge-wrap">
                                       <span class="<?php echo $displayBtn[$job['typeContract']] ?> text-white badge py-2 px-4"><?php echo $typeContrat[$job['typeContract']] ?></span>
                                   </div>
                               </div>
                               <div class="job-post-item-body d-block d-md-flex">
+
+                                  <div class="fb-share-button mr-3" data-href="http://stmncv1.fr/views/job/look-post.php?job_id='<?php echo $job['id_job']; ?>" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fstmncv1.fr%2Findex.php&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partager</a></div>
                                   <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#"><?php echo $job['name'] ?></a></div>
                                   <div><span class="fl-bigmug-line-big104"></span> <span><?php echo $job['location'] ?></span></div>
                               </div>
                           </div>
-
                           <div class="ml-auto">
-                              <?php if (isset($_SESSION['user_logged_in'])) {
+                              <?php if ($_SESSION['admin_type'] == "etudiant") {
                                   echo ' <a href="#" class="btn btn-primary py-2">Postuler</a>';
                               }?>
                           </div>

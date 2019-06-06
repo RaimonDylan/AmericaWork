@@ -52,4 +52,8 @@ class Company{
             }
         }
     }
+
+    public function getAllCompanyById($id_recruiter = null){
+        return $company = $this->model->getAllCompanyById($id_recruiter);
+    }
 }

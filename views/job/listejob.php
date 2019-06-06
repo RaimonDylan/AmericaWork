@@ -58,7 +58,8 @@ include_once('../../includes/headerPublic.php');
                         <div class="ml-auto">
                             <?php if (isset($_SESSION['user_logged_in'])) {
                                 $id_job = $job['id_job'];
-                                echo "<a href='listeCandidats.php?job_id=$id_job' class='btn btn-primary py-2 viewCandidats'>Voir les candidats</a>";
+                                echo "<a href='listeCandidats.php?job_id=$id_job' class='btn btn-primary py-2 viewCandidats'>Voir les candidats</a>&nbsp";
+                                echo "<a href='delete_job.php?job_id=$id_job' class='btn btn-danger py-2'>X</a>";
                             }?>
                         </div>
 

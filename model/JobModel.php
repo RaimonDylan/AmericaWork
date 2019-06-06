@@ -59,6 +59,11 @@ class JobModel
         return $student;
     }
 
+    public function getInfoJob($id_job){
+        $student = $this->db->rawQueryOne("SELECT * FROM `job` NATURAL JOIN company WHERE job.id_job = $id_job");
+        return $student;
+    }
+
     public function getAllRecruiters(){
         $recruiters = $this->db->get("recruiter");
         $users = $this->db->get("user");
