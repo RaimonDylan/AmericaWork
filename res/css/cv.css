@@ -265,6 +265,14 @@ a {
   }
 }
 
+.section-bouton {
+  position: absolute;
+  width: 5%;
+  float: right;
+  float: top;
+  background: #0e8db9;
+}
+
 .section-wrapper {
   width: 50%;
   float: left;

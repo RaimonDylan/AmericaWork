@@ -80,6 +80,10 @@ $etudiant = $controller->getStudent($student_id);
   </section>
 
   <section class="experience section-padding">
+    <div class="section-bouton">
+          <input class="fas fa-file-download" type="image" id="image" alt="Login"
+                 src="/media/examples/login-button.png">
+    </div>
     <div class="container">
       <h3 class="experience-title">Experience</h3>
         <?php foreach ($experiences as $experience) {
