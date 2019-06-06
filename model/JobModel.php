@@ -19,14 +19,44 @@ class JobModel
         return $jobs;
     }
 
-    public function getAllJobArray(){
-        $jobs = $this->db->query("SELECT * FROM job NATURAL JOIN company ORDER BY created_at DESC");
+    public function getAllJobArray($id_recruiter = null){
+        if(empty($id_recruiter)){
+            $jobs = $this->db->query("SELECT * FROM job NATURAL JOIN company ORDER BY created_at DESC");
+        }else{
+            $jobs = $this->db->query("SELECT * FROM job NATURAL JOIN company WHERE id_recruiter = $id_recruiter ORDER BY created_at DESC");
+        }
+
         return $jobs;
+    }
+
+    public function getStudentsByJob($id_job){
+        $etudiants = $this->db->query("SELECT * FROM student NATURAL JOIN user NATURAL JOIN student_job WHERE id_job = $id_job");
+        return $etudiants;
     }
 
     public function getCompanyByUser($id_user){
         $company = $this->db->query("SELECT * FROM `company` WHERE id_company IN (SELECT id_company FROM recruiter_company NATURAL JOIN recruiter NATURAL JOIN user WHERE user.id_user = $id_user)");
         return $company;
+    }
+
+    public function getExperiences($id_student){
+        $experiences = $this->db->query("SELECT * FROM `experience` WHERE id_student = $id_student");
+        return $experiences;
+    }
+
+    public function getCompetences($id_student){
+        $competences = $this->db->query("SELECT * FROM `skill` NATURAL JOIN student_skill WHERE skill.id_skill IN (SELECT id_skill FROM student_skill NATURAL JOIN student WHERE id_student = $id_student)");
+        return $competences;
+    }
+
+    public function getEcoles($id_student){
+        $ecoles = $this->db->query("SELECT * FROM `school` NATURAL JOIN student_school WHERE school.id_school IN (SELECT id_school FROM student_school NATURAL JOIN student WHERE id_student = $id_student)");
+        return $ecoles;
+    }
+
+    public function getStudent($id_student){
+        $student = $this->db->rawQueryOne("SELECT * FROM `student` NATURAL JOIN user WHERE student.id_student = $id_student");
+        return $student;
     }
 
     public function getAllRecruiters(){

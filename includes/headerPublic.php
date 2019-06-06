@@ -54,6 +54,7 @@
                         <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
 
                           <li class="active"><a href="http://stmncv1.fr/index.php">Accueil</a></li>
+
                             <!--
                           <li><a href="about.html">About</a></li>
                           <li><a href="contact.html">Contact</a></li>
@@ -63,6 +64,8 @@
                                 echo '<li><a href="http://stmncv1.fr/signup.php"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2"></span>Inscription</span></a></li>';
                                 echo '<li><a href="http://stmncv1.fr/login.php"><span class="rounded bg-secondary py-2 px-3 text-white"><span class="h5 mr-2"></span>Connexion</span></a></li>';
                             } else{
+                                echo '<li ><a href="http://stmncv1.fr/views/job/listejob.php">Mes Annonces</a></li>';
+                                echo '<li ><a href="http://stmncv1.fr/views/job/listeEntreprise.php">Mes Entreprises</a></li>';
                                 echo '<li><a href="http://stmncv1.fr/logout.php"><span class="rounded bg-danger py-2 px-3 text-white"><span class="h5 mr-2"></span>Déconnexion</span></a></li>';
                             }?>
 

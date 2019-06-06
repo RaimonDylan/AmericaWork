@@ -13,12 +13,16 @@ class Job{
         //require 'view/user/list.php';
     }
 
-    public function getAllJob(){
-        return $jobs = $this->model->getAllJobArray();
+    public function getAllJob($id_recruiter = null){
+        return $jobs = $this->model->getAllJobArray($id_recruiter);
     }
 
     public function getAllStudents(){
         return $students = $this->model->getAllStudents();
+    }
+
+    public function getStudentsByJob($id_job){
+        return $students = $this->model->getStudentsByJob($id_job);
     }
 
     public function getAllRecruiters(){
@@ -31,6 +35,22 @@ class Job{
 
     public function getCompanyByUser($id_user){
         return $company = $this->model->getCompanyByUser($id_user);
+    }
+
+    public function getExperiences($id_student){
+        return $experiences = $this->model->getExperiences($id_student);
+    }
+
+    public function getCompetences($id_student){
+        return $competences = $this->model->getCompetences($id_student);
+    }
+
+    public function getEcoles($id_student){
+        return $ecoles = $this->model->getEcoles($id_student);
+    }
+
+    public function getStudent($id_student){
+        return $student = $this->model->getStudent($id_student);
     }
 
 

@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+
+.arc {
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 2px solid #ffea29;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    animation: rt 2s infinite linear;
+}
+.arc::before {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border-top: 2px solid #8d29ff;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    animation: rt 4s infinite linear reverse;
+    content: "";
+}
+.arc::after {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    border-top: initial;
+    border-left: initial;
+    border-right: initial;
+    animation: cw 1s infinite;
+    content: "";
+    background: snow;
+}
+
+.arch1 {
+    height: 40px;
+    margin: auto;
+    top: 200px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    font-weight: lighter;
+    color: white;
+    margin-top:5%;
+}
+.arch1 span {
+    display: none;
+}
+.arch1::after {
+    animation: txt 5s infinite;
+    content: "";
+}
+
+.arch2 span {
+    display: none;
+}
+.arch2::after {
+    animation: txt2 5s infinite;
+    content: "";
+}
+
+@keyframes rt {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes cw {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    75% {
+        width: 40px;
+        height: 40px;
+    }
+    100% {
+        width: 0;
+        height: 0;
+    }
+}
+
+@keyframes txt {
+     0% {
+         content: "En attente d'une aventure.";
+     }
+     25% {
+         content: "En attente d'une aventure.";
+     }
+     50% {
+         content: "En attente d'une aventure..";
+     }
+     75% {
+         content: "En attente d'une aventure...";
+     }
+     100% {
+         content: "En attente d'une aventure....";
+     }
+ }
+
+@keyframes txt2 {
+    0% {
+        content: "Aventure en cours.";
+    }
+    25% {
+        content: "Aventure en cours.";
+    }
+    50% {
+        content: "Aventure en cours..";
+    }
+    75% {
+        content: "Aventure en cours...";
+    }
+    100% {
+        content: "Aventure en cours....";
+    }
+}
+
+
+.minuteur {
+    color: #333;
+    text-align: center;
+}
+
+
+.sec {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+.sec > span {
+    display: block;
+    font-size: 4.5rem;
+}
+
+
+
+.choice {
+    cursor:pointer;
+    margin-top:5%;
+    width: 30%;
+    padding: 3%;
+    border-radius: 5px;
+    background: rgba(240, 230, 220, .7);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7)
+}
+
+.nbVote{
+    float: right;
+    font-size: 1.3em;
+    opacity: 0.3;
+}
