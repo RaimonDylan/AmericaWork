@@ -36,15 +36,26 @@ include_once 'includes/header.php';
                         <?php echo $_SESSION['signup_success'];unset($_SESSION['signup_success']); ?>
                     </div>
                 <?php }?>
+
+
+                <?php if (isset($_SESSION['forgotten'])) {?>
+                    <div class="alert alert-info alert-dismissable fade in">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <?php echo $_SESSION['forgotten'];unset($_SESSION['forgotten']); ?>
+                    </div>
+                <?php }?>
 				<button type="submit" class="btn btn-success loginField" >Connexion</button>
-				<a id="forget" style="float: right">Mot de passe oublié?</a>
+				<a id="forget" style="float: right; cursor: pointer">Mot de passe oublié?</a>
 			</div>
 		</div>
 	</form>
 
-	<form class="form loginform forgot" method="POST" action="reinit.php " style="display : none;">
+
+
+
+	<form class="form loginform forgot" method="POST" action="reinit.php" style="display : none;">
 		<div class="login-panel panel panel-default">
-			<div class="panel-heading">Connectez-vous ci-dessous</div>
+			<div class="panel-heading">Réinitialisation du mot de passe</div>
 			<div class="panel-body">
 				<div class="form-group">
 					<label class="control-label">Nom d'utilisateur</label>
@@ -66,6 +77,7 @@ include_once 'includes/header.php';
                         <?php echo $_SESSION['signup_success'];unset($_SESSION['signup_success']); ?>
                     </div>
                 <?php }?>
+
 
 				<button type="submit" class="btn btn-success loginField" >Réinitialiser mot de passe</button>
 			</div>

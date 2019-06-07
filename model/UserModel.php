@@ -74,4 +74,10 @@ class UserModel
         $status = $this->db->delete('user');
         return $status;
     }
+
+    public function reinit($username, $mdp){
+        $pwd = password_hash($mdp,PASSWORD_DEFAULT);
+        $jobs = $this->db->Query("UPDATE user SET password = '$pwd' WHERE login = '$username' ");
+        return $jobs;
+    }
 }
