@@ -53,6 +53,8 @@ include_once('includes/headerPublic.php');
             }
         });
     }
+
+
 </script>
 
 <div class="site-blocks-cover" style="background-image: url(res/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">

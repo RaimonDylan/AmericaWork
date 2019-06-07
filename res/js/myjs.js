@@ -18,7 +18,6 @@ jQuery(document).ready(function($) {
 
 	$('#Rechercher').on('click', function(e) {
 		var emploi = $("#emploi").val();
-		alert(emploi);
 		var contrat = $("#contrat").val();
 		var localisation = $("#autocomplete").val();
 
@@ -27,16 +26,15 @@ jQuery(document).ready(function($) {
 			url: "views/job/filtrer.php",
 			type: "post",
 			data: {
-				name: emploi,
-				type: contrat,
-				localisation: localisation
+				"name": emploi,
+				"type": contrat,
+				"localisation": localisation
 			},
 			success: function(data) {
 				//$('.job'+id_job).append("<button disabled href='#' class='btn btn-success py-2'>Vous avez postulé</button>&nbsp;<a href='javascript:removePostuler("+id_job+")' class='btn btn-danger py-2 removePostuler'> Annuler</a>");
 				alert(data);
 			},
 			error: function(xhr) {
-				alert(xhr.text);
 			}
 		});
 	});
