@@ -37,7 +37,7 @@ include_once 'includes/header.php';
                     </div>
                 <?php }?>
 				<button type="submit" class="btn btn-success loginField" >Connexion</button>
-				<a id="forget">Mot de passe oublié?</a>
+				<a id="forget" style="float: right">Mot de passe oublié?</a>
 			</div>
 		</div>
 	</form>
