@@ -14,6 +14,5 @@ $job_name = $_POST[name];
 $job_type = $_POST[type];
 $job_localisation = $_POST[localisation];
 
-return $job_name;
+print_r($_POST);
 //$job = $controller->postuler($job_id,$_SESSION['id_student']);
-return true;

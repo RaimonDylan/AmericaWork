@@ -89,7 +89,7 @@ include_once('includes/headerPublic.php');
                         <input type="text" class="form-control form-control-block search-input" id="autocomplete" placeholder="Localisation" onFocus="geolocate()">
                       </div>
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                        <input id="Rechercher" type="submit" class="btn btn-primary btn-block" value="Rechercher">
+                        <input id="Rechercher" type="button" class="btn btn-primary btn-block" value="Rechercher">
                       </div>
                     </div>
                   </form>
@@ -201,34 +201,6 @@ include_once('includes/headerPublic.php');
 
       include_once('includes/footerPublic.php');
       ?>
-
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $('Rechercher').on('click', function(e) {
-                var emploi = $("#emploi").val();
-                var contrat = $("#contrat").val();
-                var localisation = $("#autocomplete").val();
-
-                $('#listeAnnonce').empty();
-                $.ajax({
-                    url: "views/student/postuler.php",
-                    type: "post",
-                    data: {
-                        name: emploi,
-                        type: contrat,
-                        localisation: localisation
-                    },
-                    success: function(response) {
-                        //$('.job'+id_job).append("<button disabled href='#' class='btn btn-success py-2'>Vous avez postulé</button>&nbsp;<a href='javascript:removePostuler("+id_job+")' class='btn btn-danger py-2 removePostuler'> Annuler</a>");
-                        alert(response);
-                    },
-                    error: function(xhr) {
-                        alert(xhr.text);
-                    }
-                });
-            });
-        });
-    </script>
     
   </body>
 </html>

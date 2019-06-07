@@ -122,3 +122,4 @@
         async defer></script>
 
 <script src="http://stmncv1.fr/res/js/main.js"></script>
+<script src="http://stmncv1.fr/res/js/myjs.js"></script>
