@@ -10,4 +10,6 @@ jQuery(document).ready(function($) {
 			$('.student').hide();
 		}
 	});
+
+
 });

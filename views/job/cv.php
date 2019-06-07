@@ -143,7 +143,7 @@ $etudiant = $controller->getStudent($student_id);
                         <div class="experience-title" > <?php echo $libelle ?> </div >
                         <!--JOB TITLE-->
                         <div class="company-description" >
-                        <p > Lorem ipsum dolor sit amet, consectetur adipiscing elit . Fusce a elit facilisis, adipiscing leo in, dignissim magna .</p >
+                        <p > Bla, blablabla, blabla, bla? BLABLA.</p >
                         </div >
                     </div >
                 </div >
@@ -175,7 +175,9 @@ $etudiant = $controller->getStudent($student_id);
   <div class="clearfix"></div>
 </div>
 
-<a href="javascript:genPDF('<?php echo $etudiant['f_name'] ?>','<?php echo $etudiant['l_name'] ?>')">Download PDF</a>
+<a href="javascript:genPDF('<?php echo $etudiant['f_name'] ?>','<?php echo $etudiant['l_name'] ?>')"><img style="width:64px; height:64px; position:fixed;top:5%;left:90%;"
+    src="../../res/images/exportPdf.png"
+                                                                                                          alt="Export pdf" /></a>
 
 </body>
 </html>

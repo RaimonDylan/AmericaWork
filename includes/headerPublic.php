@@ -24,6 +24,7 @@
 
     <link rel="stylesheet" href="http://stmncv1.fr/res/css/style.css">
 
+
 </head>
 <body>
 
@@ -65,9 +66,12 @@
                             <?php if (!isset($_SESSION['user_logged_in'])) {
                                 echo '<li><a href="http://stmncv1.fr/signup.php"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2"></span>Inscription</span></a></li>';
                                 echo '<li><a href="http://stmncv1.fr/login.php"><span class="rounded bg-secondary py-2 px-3 text-white"><span class="h5 mr-2"></span>Connexion</span></a></li>';
-                            } else{
+                            } else if($_SESSION['admin_type'] == "recruteur"){
                                 echo '<li ><a href="http://stmncv1.fr/views/job/listejob.php">Mes Annonces</a></li>';
                                 echo '<li ><a href="http://stmncv1.fr/views/company/listeEntreprise.php">Mes Entreprises</a></li>';
+                                echo '<li><a href="http://stmncv1.fr/logout.php"><span class="rounded bg-danger py-2 px-3 text-white"><span class="h5 mr-2"></span>Déconnexion</span></a></li>';
+                            } else if($_SESSION['admin_type'] == "etudiant"){
+                                echo '<li ><a href="http://stmncv1.fr/views/student/profil.php">Profil</a></li>';
                                 echo '<li><a href="http://stmncv1.fr/logout.php"><span class="rounded bg-danger py-2 px-3 text-white"><span class="h5 mr-2"></span>Déconnexion</span></a></li>';
                             }?>
 

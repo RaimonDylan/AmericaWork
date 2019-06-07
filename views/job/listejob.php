@@ -15,6 +15,24 @@ $jobs = $controller->getAllJob($_SESSION['id_recruiter']);
 
 include_once('../../includes/headerPublic.php');
 ?>
+<script type="text/javascript">
+
+    function removeJob(id_annonce) {
+        $.ajax({
+            url: "removeJob.php",
+            type: "post",
+            data: {
+                id: id_annonce
+            },
+            success: function(response) {
+                $('.annonceJob'+id_annonce).remove();
+            },
+            error: function(xhr) {
+                alert(xhr.text);
+            }
+        });
+    }
+</script>
 
     <div class="unit-5 overlay" style="background-image: url('../../res/images/hero_bg_2.jpg');">
       <div class="container text-center">
@@ -38,7 +56,7 @@ include_once('../../includes/headerPublic.php');
         $typeContrat = array("fulltime" => "Temps plein","parttime" => "Temps partiel","freelance" => "Freelance","internship" => "Stage");
         $displayBtn = array("fulltime" => "bg-warning","parttime" => "bg-primary","freelance" => "bg-info","internship" => "bg-secondary");
         foreach ($jobs as $job): ?>
-            <div class="row" data-aos="fade">
+            <div class="row annonceJob<?php echo $job['id_job'] ?>" data-aos="fade">
                 <div class="col-md-12">
                     <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
 
@@ -59,7 +77,7 @@ include_once('../../includes/headerPublic.php');
                             <?php if (isset($_SESSION['user_logged_in'])) {
                                 $id_job = $job['id_job'];
                                 echo "<a href='listeCandidats.php?job_id=$id_job' class='btn btn-primary py-2 viewCandidats'>Voir les candidats</a>&nbsp";
-                                echo "<a href='delete_job.php?job_id=$id_job' class='btn btn-danger py-2'>X</a>";
+                                echo "<a href='javascript:removeJob($id_job)' class='btn btn-danger py-2'>X</a>";
                             }?>
                         </div>
 

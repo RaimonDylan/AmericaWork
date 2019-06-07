@@ -38,12 +38,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (password_verify($passwd, $db_password)) {
 
             $_SESSION['user_logged_in'] = TRUE;
-            $_SESSION['admin_type'] = "recruteur";
             $_SESSION['id_user'] = $user_id;
             $db->where("id_user", $user_id);
             $row = $db->get('recruiter');
             if ($db->count >= 1) {
+                $_SESSION['admin_type'] = "recruteur";
                 $_SESSION['id_recruiter'] = $row[0]['id_recruiter'];
+            }
+            $db->where("id_user", $user_id);
+            $row = $db->get('student');
+            if ($db->count >= 1) {
+                $_SESSION['admin_type'] = "etudiant";
+                $_SESSION['id_student'] = $row[0]['id_student'];
             }
             header('Location:index.php');
 

@@ -21,6 +21,22 @@ class Job{
         return $job = $this->model->getInfoJob($id_job);
     }
 
+    public function postuler($id_job, $id_student){
+        return $job = $this->model->postuler($id_job, $id_student);
+    }
+
+    public function removePostuler($id_job, $id_student){
+        return $job = $this->model->removePostuler($id_job, $id_student);
+    }
+
+    public function removeJob($id_job){
+        return $job = $this->model->removeJob($id_job);
+    }
+
+    public function getJobPostuler($id_student){
+        return $jobs = $this->model->getJobPostuler($id_student);
+    }
+
     public function getAllStudents(){
         return $students = $this->model->getAllStudents();
     }

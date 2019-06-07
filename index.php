@@ -9,9 +9,51 @@ $db = getDbInstance();
 $model = new JobModel($db);
 $controller = new Job($model);
 $jobs = $controller->getAllJob();
+if(isset($_SESSION['id_student'])){
+    $id_student = $_SESSION['id_student'];
+    $jobsPostuler = $controller->getJobPostuler($id_student);
+}
 include_once('includes/headerPublic.php');
 ?>
+<script type="text/javascript">
+    function postuler(id_job) {
+        $('.job'+id_job).empty();
+        $.ajax({
+            url: "views/student/postuler.php",
+            type: "post",
+            data: {
+                id: id_job
+            },
+            success: function(response) {
+                $('.job'+id_job).append("<button disabled href='#' class='btn btn-success py-2'>Vous avez postulé</button>&nbsp;<a href='javascript:removePostuler("+id_job+")' class='btn btn-danger py-2 removePostuler'> Annuler</a>");
 
+            },
+            error: function(xhr) {
+                alert(xhr.text);
+            }
+        });
+    }
+
+    function removePostuler(id_job) {
+        var job_id = id_job;
+        $('.job'+id_job).empty();
+        $.ajax({
+            url: "views/student/removePostuler.php",
+            type: "post",
+            data: {
+                id: id_job
+            },
+            success: function(response) {
+                var btn = "<a href='javascript:postuler("+job_id+")' class='btn btn-primary py-2 postuler'>Postuler</a>";
+                $('.job'+id_job).append(btn);
+
+            },
+            error: function(xhr) {
+                alert(xhr.text);
+            }
+        });
+    }
+</script>
 
 
     <div class="site-blocks-cover" style="background-image: url(res/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
@@ -69,7 +111,7 @@ include_once('includes/headerPublic.php');
             <h2 class="font-weight-bold text-black">Annonces récentes</h2>
           </div>
           <div class="col-md-3" data-aos="fade" data-aos-delay="200">
-              <?php if (isset($_SESSION['user_logged_in'])) {
+              <?php if (isset($_SESSION['user_logged_in']) && ($_SESSION['admin_type'] != "etudiant")) {
                   echo '<a href="views/job/new-post.php" class="btn btn-primary py-3 btn-block"><span class="h5">+</span> Poster une annonce</a>';
               }?>
 
@@ -79,7 +121,17 @@ include_once('includes/headerPublic.php');
           <?php
           $typeContrat = array("fulltime" => "Temps plein","parttime" => "Temps partiel","freelance" => "Freelance","internship" => "Stage");
           $displayBtn = array("fulltime" => "bg-warning","parttime" => "bg-primary","freelance" => "bg-info","internship" => "bg-secondary");
-           foreach ($jobs as $job): ?>
+           foreach ($jobs as $job):
+               $postuler = false;
+               if(isset($_SESSION['admin_type']) && $_SESSION['admin_type'] == "etudiant"){
+                   foreach ($jobsPostuler as $unJobPostuler){
+                       if($job['id_job'] == $unJobPostuler['id_job']){
+                           $postuler = true;
+                       }
+                   }
+               }
+
+               ?>
               <div class="row" data-aos="fade">
                   <div class="col-md-12">
                       <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
@@ -98,9 +150,14 @@ include_once('includes/headerPublic.php');
                                   <div><span class="fl-bigmug-line-big104"></span> <span><?php echo $job['location'] ?></span></div>
                               </div>
                           </div>
-                          <div class="ml-auto">
-                              <?php if ($_SESSION['admin_type'] == "etudiant") {
-                                  echo ' <a href="#" class="btn btn-primary py-2">Postuler</a>';
+                          <div class="ml-auto job<?php echo $job['id_job']?>" >
+                              <?php if (isset($_SESSION['admin_type']) && $_SESSION['admin_type'] == "etudiant") {
+                                  if($postuler){
+                                      echo ' <button disabled href="#" class="btn btn-success py-2">Vous avez postulé</button>&nbsp;';
+                                      echo ' <a disabled href="javascript:removePostuler('.$job['id_job'].')"class="btn btn-danger py-2 removePostuler">Annuler</a>';
+                                  }else{
+                                      echo ' <a href="javascript:postuler('.$job['id_job'].')" class="btn btn-primary py-2 postuler">Postuler</a>';
+                                  }
                               }?>
                           </div>
 

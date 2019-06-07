@@ -64,6 +64,11 @@ class JobModel
         return $student;
     }
 
+    public function getJobPostuler($id_student){
+        $jobs = $this->db->Query("SELECT * FROM `student_job` WHERE id_student = $id_student");
+        return $jobs;
+    }
+
     public function getAllRecruiters(){
         $recruiters = $this->db->get("recruiter");
         $users = $this->db->get("user");
@@ -102,6 +107,26 @@ class JobModel
         $this->db->where('id_job', $id);
         $job = $this->db->getOne("job");
         return $job;
+    }
+
+    public function postuler($id_job, $id_student){
+        $data_to_store['id_student'] = $id_student;
+        $data_to_store['id_job'] = $id_job;
+        $data_to_store['dt_apply'] = date("Y-m-d");
+        $last_id = $this->db->insert('student_job', $data_to_store);
+        return $last_id;
+    }
+
+    public function removePostuler($id_job, $id_student){
+        $this->db->where('id_job', $id_job)->where('id_student', $id_student);
+        $status = $this->db->delete('student_job');
+        return $status;
+    }
+
+    public function removeJob($id_job){
+        $this->db->where('id_job', $id_job);
+        $status = $this->db->delete('job');
+        return $status;
     }
 
     public function insert(){
