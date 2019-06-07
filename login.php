@@ -36,7 +36,6 @@ include_once 'includes/header.php';
                         <?php echo $_SESSION['signup_success'];unset($_SESSION['signup_success']); ?>
                     </div>
                 <?php }?>
-                <a id="forget">Mot de passe oublié?</a>
 				<button type="submit" class="btn btn-success loginField" >Connexion</button>
 				<a id="forget">Mot de passe oublié?</a>
 			</div>
