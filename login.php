@@ -38,6 +38,7 @@ include_once 'includes/header.php';
                 <?php }?>
                 <a id="forget">Mot de passe oublié?</a>
 				<button type="submit" class="btn btn-success loginField" >Connexion</button>
+				<a id="forget">Mot de passe oublié?</a>
 			</div>
 		</div>
 	</form>
@@ -67,7 +68,7 @@ include_once 'includes/header.php';
                     </div>
                 <?php }?>
 
-				<button type="submit" class="btn btn-success loginField" >Connexion</button>
+				<button type="submit" class="btn btn-success loginField" >Changer mot de passe</button>
 			</div>
 		</div>
 	</form>
