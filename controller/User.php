@@ -67,4 +67,8 @@ class User{
             }
         }
     }
+
+    public function reinit($username, $mdp){
+        $this->model->reinit($username, $mdp);
+    }
 }
