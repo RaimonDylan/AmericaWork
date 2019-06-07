@@ -29,6 +29,11 @@ class JobModel
         return $jobs;
     }
 
+    public  function getRecherche($nom,$type,$localisation){
+        $jobs = $this->db->query("SELECT * FROM job WHERE jobTitle LIKE %$nom%");
+        return $jobs;
+    }
+
     public function getStudentsByJob($id_job){
         $etudiants = $this->db->query("SELECT * FROM student NATURAL JOIN user NATURAL JOIN student_job WHERE id_job = $id_job");
         return $etudiants;

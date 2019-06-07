@@ -13,6 +13,6 @@ $job_name = $_POST["name"];
 $job_type = $_POST["type"];
 $job_localisation = $_POST["localisation"];
 
-//$jobs = $controller->getAllJob($_SESSION['id_recruiter']);
+$jobs = $controller->getRecherche($job_name,$job_type,$job_localisation);
 
-echo $job_name;
+return $jobs;

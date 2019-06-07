@@ -7,6 +7,10 @@ class Job{
         $this->model = $model;
     }
 
+    public  function getRecherche($nom,$type,$localisation){
+        return $this->model->getRecherche($nom,$type,$localisation);
+    }
+
     public function index($page)
     {
         return $jobs = $this->model->getAllJob($page);
