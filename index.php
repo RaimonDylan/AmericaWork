@@ -55,8 +55,7 @@ include_once('includes/headerPublic.php');
     }
 </script>
 
-
-    <div class="site-blocks-cover" style="background-image: url(res/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+<div class="site-blocks-cover" style="background-image: url(res/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row row-custom align-items-center">
           <div class="col-md-10">
@@ -72,12 +71,12 @@ include_once('includes/headerPublic.php');
                   <form action="#" method="post">
                     <div class="row">
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                        <input type="text" class="form-control" placeholder="ex. Web Developer">
+                        <input id="emploi" type="text" class="form-control" placeholder="ex. Web Developer">
                       </div>
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
                         <div class="select-wrap">
                           <span class="icon-keyboard_arrow_down arrow-down"></span>
-                          <select name="" id="" class="form-control">
+                          <select name="" id="contrat" class="form-control">
                             <option value="">Type Contrat</option>
                             <option value="fulltime">Temps plein</option>
                             <option value="partime">Temps partiel</option>
@@ -90,7 +89,7 @@ include_once('includes/headerPublic.php');
                         <input type="text" class="form-control form-control-block search-input" id="autocomplete" placeholder="Localisation" onFocus="geolocate()">
                       </div>
                       <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                        <input type="submit" class="btn btn-primary btn-block" value="Rechercher">
+                        <input id="Rechercher" type="submit" class="btn btn-primary btn-block" value="Rechercher">
                       </div>
                     </div>
                   </form>
@@ -105,7 +104,7 @@ include_once('includes/headerPublic.php');
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.3"></script>
 
     <div class="site-section bg-light">
-      <div class="container">
+      <div id="listeAnnonce" class="container">
         <div class="row justify-content-start text-left mb-5">
           <div class="col-md-9" data-aos="fade">
             <h2 class="font-weight-bold text-black">Annonces récentes</h2>
@@ -203,6 +202,34 @@ include_once('includes/headerPublic.php');
       include_once('includes/footerPublic.php');
       ?>
 
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('Rechercher').on('click', function(e) {
+                var emploi = $("#emploi").val();
+                var contrat = $("#contrat").val();
+                var localisation = $("#autocomplete").val();
+
+                $('#listeAnnonce').empty();
+                $.ajax({
+                    url: "views/student/postuler.php",
+                    type: "post",
+                    data: {
+                        name: emploi,
+                        type: contrat,
+                        localisation: localisation
+                    },
+                    success: function(response) {
+                        //$('.job'+id_job).append("<button disabled href='#' class='btn btn-success py-2'>Vous avez postulé</button>&nbsp;<a href='javascript:removePostuler("+id_job+")' class='btn btn-danger py-2 removePostuler'> Annuler</a>");
+                        alert(response);
+                    },
+                    error: function(xhr) {
+                        alert(xhr.text);
+                    }
+                });
+            });
+        });
+    </script>
     
   </body>
 </html>
+
