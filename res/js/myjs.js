@@ -12,7 +12,6 @@ jQuery(document).ready(function($) {
 	});
 
 	$('#forget').on('click', function() {
-
 		$(".login").hide();
 		$(".forgot").show();
 	});

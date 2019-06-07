@@ -42,7 +42,7 @@ include_once 'includes/header.php';
 		</div>
 	</form>
 
-	<form class="form loginform forgot" method="POST" action="authenticate.php " style="display : none;">
+	<form class="form loginform forgot" method="POST" action="reinit.php " style="display : none;">
 		<div class="login-panel panel panel-default">
 			<div class="panel-heading">Connectez-vous ci-dessous</div>
 			<div class="panel-body">
@@ -51,7 +51,7 @@ include_once 'includes/header.php';
 					<input type="text" name="username" class="form-control" required="required" readonly onfocus="this.removeAttribute('readonly');">
 				</div>
 				<div class="form-group">
-					<label class="control-label">Mot de passe</label>
+					<label class="control-label">Nouveau mot de passe</label>
 					<input type="password" name="passwd" class="form-control" required="required" readonly onfocus="this.removeAttribute('readonly');">
 				</div>
 				<?php if (isset($_SESSION['login_failure'])) {?>
@@ -67,7 +67,7 @@ include_once 'includes/header.php';
                     </div>
                 <?php }?>
 
-				<button type="submit" class="btn btn-success loginField" >Changer mot de passe</button>
+				<button type="submit" class="btn btn-success loginField" >Réinitialiser mot de passe</button>
 			</div>
 		</div>
 	</form>
